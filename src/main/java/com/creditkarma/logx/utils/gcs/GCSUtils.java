@@ -1,4 +1,4 @@
-package gcs;
+package com.creditkarma.logx.utils.gcs;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by yongjia.wang on 11/9/16.
+ * Code cherry picked from Secor
  */
 public class GCSUtils {
 
@@ -50,7 +50,7 @@ public class GCSUtils {
 
             mStorageService = new Storage.Builder(httpTransport, JSON_FACTORY,
                     setHttpBackoffTimeout(credential, connectTimeoutMs, readTimeoutMs))
-                    .setApplicationName("com.pinterest.secor")
+                    .setApplicationName("com.creditkarma.logx")
                     .build();
         }
         return mStorageService;

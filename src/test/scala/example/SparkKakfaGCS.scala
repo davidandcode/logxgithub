@@ -2,6 +2,7 @@ package example
 
 import java.io.{ByteArrayInputStream, InputStream, SequenceInputStream}
 
+import com.creditkarma.logx.utils.gcs.GCSUtils
 import com.google.api.client.http.InputStreamContent
 import com.google.api.services.storage.model.StorageObject
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer}
@@ -11,9 +12,8 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.kafka010.LocationStrategies._
 import org.apache.spark.streaming.kafka010.{KafkaUtils, OffsetRange}
-import scala.collection.JavaConverters._
 
-import gcs.GCSUtils
+import scala.collection.JavaConverters._
 
 
 /**
