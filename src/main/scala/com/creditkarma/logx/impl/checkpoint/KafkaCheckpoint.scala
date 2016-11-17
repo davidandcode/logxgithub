@@ -18,4 +18,6 @@ class KafkaCheckpoint(offsetRanges: Seq[OffsetRange] = Seq.empty) extends Checkp
       osr => osr.topicPartition() -> osr.untilOffset
     }.toMap
   }
+
+  override def toString = offsetRanges.toString()
 }

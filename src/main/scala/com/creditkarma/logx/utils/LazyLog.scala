@@ -19,7 +19,10 @@ trait LazyLog {
     logger.addAppender(appender)
   }
 
-  def setLevel(level: Level) = logger.setLevel(level)
+  def setLevel(level: Level) = {
+    logger.setLevel(level)
+    this
+  }
 
   @inline final def trace(message: => String) {
     logger.trace(lazyMessage(message))

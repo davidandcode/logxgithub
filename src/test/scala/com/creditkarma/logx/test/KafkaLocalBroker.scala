@@ -6,6 +6,7 @@ import com.creditkarma.logx.core.Source
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.sourcesink.Kafka
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
+import com.creditkarma.logx.instrumentation.NastyNettyInstrumentor
 import com.creditkarma.logx.utils.LazyLog
 import info.batey.kafka.unit.KafkaUnit
 import kafka.admin.AdminUtils
@@ -57,13 +58,17 @@ object KafkaLocalTest extends LazyLog {
 
     val kafkaReader =
     new KafkaSparkRDDReader[String, String](new Kafka(kafkaParams))
-    kafkaReader.printLogToConsole()
-    kafkaReader.setLevel(Level.DEBUG)
+    kafkaReader.registerInstrumentor(NastyNettyInstrumentor)
 
     println(kafkaReader.start())
     kafkaReader.fetchData(new KafkaCheckpoint())
     println(kafkaReader.fetchedRecords)
-    SparkContext.getOrCreate(new SparkConf().setAppName("test").setMaster("local[2]"))
+
+    SparkContext.getOrCreate(new SparkConf().setAppName("test").setMaster("local[2]")
+      .set("spark.driver.host", "127.0.0.1")
+      // set local host explicitly, the call through java.net.InetAddress.getLocalHost on laptop with VPN can be inconsistent
+      // Also if it returns IPV6, Spark won't work with it
+    )
     println(kafkaReader.fetchedData.rdd.map(_.value()).collect().toSeq)
     info("server shutdown")
     kafkaUnitServer.shutdown()

@@ -5,6 +5,7 @@ package com.creditkarma.logx.core
   */
 trait Module {
   def moduleType: ModuleType.Value
+  var cycleId: Long = 0
 }
 
 

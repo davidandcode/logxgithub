@@ -1,7 +1,6 @@
 package com.creditkarma.logx.impl.streamdata
 
 import com.creditkarma.logx.core.StreamData
-import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.spark.rdd.RDD
 
 /**

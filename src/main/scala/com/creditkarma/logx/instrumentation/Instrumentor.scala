@@ -8,7 +8,9 @@ import com.creditkarma.logx.core.Module
   * Implementations of the metric reporters are responsible to interpret and process the metrics
   * It's important the metric reporter itself consumes little resource and all the methods should return immediately (no blocking IO etc.)
   */
-trait MetricReporter {
+trait Instrumentor {
+
+  def name: String
 
   def cycleStarted(cycleId: Long): Unit
 
@@ -17,9 +19,9 @@ trait MetricReporter {
   def updateStatus(cycleId: Long, module: Module, status: Status): Unit
 
   def updateMetricLong(cycleId: Long, module: Module, metricType: MetricType.Value, metricValue: Long,
-                       args: Map[MetricArgs.Value, Object] = Map.empty): Unit
+                       args: Map[MetricArgs.Value, Any] = Map.empty): Unit
 
   def updateMetricDouble(cycleId: Long, module: Module, metricType: MetricType.Value, metricValue: Double,
-                         args: Map[MetricArgs.Value, Object] = Map.empty): Unit
+                         args: Map[MetricArgs.Value, Any] = Map.empty): Unit
 
 }
