@@ -2,12 +2,12 @@ package example
 
 import java.io.{BufferedReader, FileReader}
 
-import com.creditkarma.logx.core.{Checkpoint, CheckpointService, Sink, Source, StreamData, StreamReader, Transformer, Writer, _}
+import com.creditkarma.logx.base.{Checkpoint, CheckpointService, Sink, Source, StreamData, StreamReader, Transformer, Writer, _}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.sourcesink.Kafka
 import com.creditkarma.logx.impl.streamdata.SparkRDD
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
-import com.creditkarma.logx.instrumentation.NastyNettyInstrumentor
+import com.creditkarma.logx.instrumentation.LogInfoInstrumentor
 import info.batey.kafka.unit.KafkaUnit
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
@@ -31,7 +31,7 @@ object KafkaTest1 {
     override def name: String = "dummy sink"
   }
 
-  class KafkaSparkRDDMessageCollector extends Writer[DummySink, SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint]{
+  class KafkaSparkRDDMessageCollector(collectedData: ListBuffer[String]) extends Writer[DummySink, SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint]{
     override val sink = null
 
     override def start(): Boolean = true
@@ -39,11 +39,9 @@ object KafkaTest1 {
     override def close(): Unit = {}
 
     override def write(data: SparkRDD[ConsumerRecord[String, String]]): KafkaCheckpoint = {
-      collectedData = data.rdd.map(_.value()).collect()
+      collectedData ++= data.rdd.map(_.value()).collect()
       readCheckpoint.get
     }
-
-    var collectedData: Seq[String] = Seq.empty
   }
 
   class InMemoryKafkaCheckpointService extends CheckpointService[KafkaCheckpoint]{
@@ -69,6 +67,7 @@ object KafkaTest1 {
 
     def start(): Unit = {
       kafkaUnitServer.startup()
+      kafkaUnitServer.createTopic("testTopic", 5)
     }
 
     val testData: ListBuffer[String] = ListBuffer.empty
@@ -89,6 +88,13 @@ object KafkaTest1 {
       }
     }
 
+    def sendNextMessage(n: Int): Unit = {
+      var i = 0
+      while(i < n && sendNextMessage()){
+        i += 1
+      }
+    }
+
     def sendNextMessage(): Boolean = {
       if(dataSentToKafka == testData.size){
         false
@@ -98,8 +104,9 @@ object KafkaTest1 {
         dataSentToKafka += 1
         true
       }
-
     }
+
+    def sentMessages: Seq[String] = testData.slice(0, dataSentToKafka)
 
     def stop(): Unit = {
       kp.close()
@@ -132,27 +139,28 @@ object KafkaTest1 {
 
 
 
-    val testLogX = new LogX[
-      Kafka, DummySink, SparkRDD[ConsumerRecord[String, String]], SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint,
-      KafkaSparkRDDReader[String, String], IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]],
-      KafkaSparkRDDMessageCollector, InMemoryKafkaCheckpointService
-    ](
+    val collectedData: ListBuffer[String] = ListBuffer.empty
+    val testLogX = new LogXCore(
       "test-logX",
       new KafkaSparkRDDReader[String, String](new Kafka(kafkaParams)).setMatchFetchRecords(1),
       new IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]](),
-      new KafkaSparkRDDMessageCollector(),
+      new KafkaSparkRDDMessageCollector(collectedData),
       new InMemoryKafkaCheckpointService()
     )
 
 
-    testLogX.registerInstrumentor(NastyNettyInstrumentor)
+    testLogX.registerInstrumentor(LogInfoInstrumentor)
 
-    TestKafkaServer.sendNextMessage()
+    TestKafkaServer.sendNextMessage(5)
     testLogX.runOneCycle(0)
-    println(testLogX.writer.collectedData)
-    TestKafkaServer.sendNextMessage()
+    println(collectedData)
+    TestKafkaServer.sendNextMessage(4)
     testLogX.runOneCycle(1)
-    println(testLogX.writer.collectedData)
+    println(collectedData)
+
+    println(collectedData.size)
+    println(TestKafkaServer.sentMessages.size)
+    assert(collectedData.toSet == TestKafkaServer.sentMessages.toSet)
 
     testLogX.close()
 

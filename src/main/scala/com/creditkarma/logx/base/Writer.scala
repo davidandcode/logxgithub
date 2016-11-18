@@ -1,7 +1,6 @@
-package com.creditkarma.logx.core
+package com.creditkarma.logx.base
 
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
-import com.creditkarma.logx.instrumentation.Instrumentable
 
 /**
   * Created by yongjia.wang on 11/16/16.

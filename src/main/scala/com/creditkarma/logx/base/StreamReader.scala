@@ -1,6 +1,4 @@
-package com.creditkarma.logx.core
-
-import com.creditkarma.logx.instrumentation.Instrumentable
+package com.creditkarma.logx.base
 
 /**
   *

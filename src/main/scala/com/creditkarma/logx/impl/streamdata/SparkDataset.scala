@@ -1,6 +1,6 @@
 package com.creditkarma.logx.impl.streamdata
 
-import com.creditkarma.logx.core.StreamData
+import com.creditkarma.logx.base.StreamData
 import org.apache.spark.sql.Dataset
 
 /**

@@ -2,11 +2,11 @@ package com.creditkarma.logx.test
 
 import java.util.Properties
 
-import com.creditkarma.logx.core.Source
+import com.creditkarma.logx.base.Source
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.sourcesink.Kafka
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
-import com.creditkarma.logx.instrumentation.NastyNettyInstrumentor
+import com.creditkarma.logx.instrumentation.LogInfoInstrumentor
 import com.creditkarma.logx.utils.LazyLog
 import info.batey.kafka.unit.KafkaUnit
 import kafka.admin.AdminUtils
@@ -58,7 +58,7 @@ object KafkaLocalTest extends LazyLog {
 
     val kafkaReader =
     new KafkaSparkRDDReader[String, String](new Kafka(kafkaParams))
-    kafkaReader.registerInstrumentor(NastyNettyInstrumentor)
+    kafkaReader.registerInstrumentor(LogInfoInstrumentor)
 
     println(kafkaReader.start())
     kafkaReader.fetchData(new KafkaCheckpoint())

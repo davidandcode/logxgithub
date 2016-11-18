@@ -1,6 +1,6 @@
 package com.creditkarma.logx.impl.checkpoint
 
-import com.creditkarma.logx.core.Checkpoint
+import com.creditkarma.logx.base.Checkpoint
 import org.apache.kafka.common.TopicPartition
 import org.apache.spark.streaming.kafka010.OffsetRange
 

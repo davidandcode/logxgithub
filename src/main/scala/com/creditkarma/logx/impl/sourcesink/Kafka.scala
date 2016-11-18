@@ -1,6 +1,6 @@
 package com.creditkarma.logx.impl.sourcesink
 
-import com.creditkarma.logx.core.{Sink, Source}
+import com.creditkarma.logx.base.{Sink, Source}
 import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializer}
 
 /**
