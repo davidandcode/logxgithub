@@ -7,8 +7,8 @@ import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
   */
 trait Writer [S <: Sink, D <: StreamBuffer, C <: Checkpoint] extends Module  with Instrumentable {
   val sink: S
-  def start(): Boolean
-  def close(): Unit
+  def start(): Unit = {}
+  def close(): Unit = {}
 
   /**
     *

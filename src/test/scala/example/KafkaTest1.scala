@@ -34,10 +34,6 @@ object KafkaTest1 {
   class KafkaSparkRDDMessageCollector(collectedData: ListBuffer[String]) extends Writer[DummySink, SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint]{
     override val sink = null
 
-    override def start(): Boolean = true
-
-    override def close(): Unit = {}
-
     override def write(data: SparkRDD[ConsumerRecord[String, String]]): KafkaCheckpoint = {
       collectedData ++= data.rdd.map(_.value()).collect()
       nextCheckpoint.get
@@ -152,10 +148,10 @@ object KafkaTest1 {
     testLogX.registerInstrumentor(LogInfoInstrumentor)
 
     TestKafkaServer.sendNextMessage(5)
-    testLogX.runOneCycle(0)
+    testLogX.runOneCycle()
     println(collectedData)
     TestKafkaServer.sendNextMessage(4)
-    testLogX.runOneCycle(1)
+    testLogX.runOneCycle()
     println(collectedData)
 
     println(collectedData.size)

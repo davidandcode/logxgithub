@@ -28,7 +28,7 @@ class LogXCore[S <: Source, K <: Sink, I <: StreamBuffer, O <: StreamBuffer, C <
     checkPointService.registerInstrumentor(instrumentor)
   }
 
-  def runOneCycle(cycleId: Long) = {
+  def runOneCycle() = {
 
     instrumentors.foreach(_.cycleStarted)
 
@@ -88,15 +88,25 @@ class LogXCore[S <: Source, K <: Sink, I <: StreamBuffer, O <: StreamBuffer, C <
   }
 
   def start(pollingInterVal: Long = 1000): Unit = {
-    if(reader.start() && writer.start()){
-      scala.sys.addShutdownHook(close)
-      var cycleId: Long = 0
-      while(true){
-        runOneCycle(cycleId)
-        cycleId += 1
-        Thread.sleep(pollingInterVal)
-      }
+
+    Try(reader.start())
+    match {
+      case Success(_) =>
+        Try(writer.start())
+        match {
+          case Success(_) =>
+
+            scala.sys.addShutdownHook(close)
+
+            while (true) {
+              runOneCycle()
+              Thread.sleep(pollingInterVal)
+            }
+          case Failure(f) => throw new Exception(s"Failed to start writer ${writer}", f)
+        }
+      case Failure(f) => throw new Exception(s"Failed to start reader ${reader}", f)
     }
+
   }
 
 

@@ -9,8 +9,8 @@ trait StreamReader[S <: Source, D <: StreamBuffer, C <: Checkpoint] extends Modu
   val source: S
   override def moduleType: ModuleType.Value = ModuleType.Reader
 
-  def start(): Boolean
-  def close(): Unit
+  def start(): Unit = {}
+  def close(): Unit = {}
 
   /**
     * Fetch data from checkpoint all the way to the head of the stream

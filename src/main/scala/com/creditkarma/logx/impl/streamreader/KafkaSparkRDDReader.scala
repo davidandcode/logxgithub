@@ -37,10 +37,6 @@ class KafkaSparkRDDReader[K, V](val source: Kafka)
     this
   }
 
-  override def start(): Boolean = {
-    true
-  }
-
   def kafkaConsumer: KafkaConsumer[K, V] = {
     if (_kafkaConsumer == null) {
       instrumentors.foreach(_.updateStatus(this, new StatusOK(s"Creating Kafka consumer with ${source.kafkaParams}")))
@@ -58,7 +54,11 @@ class KafkaSparkRDDReader[K, V](val source: Kafka)
   }
 
   override def close(): Unit = {
-    if(_kafkaConsumer != null) _kafkaConsumer.close()
+
+    if(_kafkaConsumer != null) {
+      instrumentors.foreach(_.updateStatus(this, new StatusOK(s"Closing kafka consumer in reader $this")))
+      _kafkaConsumer.close()
+    }
   }
 
   override def fetchData(checkpoint: KafkaCheckpoint): KafkaCheckpoint = {
