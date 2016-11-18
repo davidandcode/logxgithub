@@ -5,7 +5,7 @@ import java.util
 import com.creditkarma.logx.base.{StatusError, StatusOK, StreamReader}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.sourcesink.Kafka
-import com.creditkarma.logx.impl.streamdata.SparkRDD
+import com.creditkarma.logx.impl.streambuffer.SparkRDD
 import com.creditkarma.logx.utils.LazyLog
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer}
 import org.apache.kafka.common.TopicPartition

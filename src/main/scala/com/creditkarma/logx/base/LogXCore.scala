@@ -10,7 +10,7 @@ import scala.util.{Failure, Success, Try}
   * Created by yongjia.wang on 11/16/16.
   */
 
-class LogXCore[S <: Source, K <: Sink, I <: StreamData, O <: StreamData, C <: Checkpoint]
+class LogXCore[S <: Source, K <: Sink, I <: StreamBuffer, O <: StreamBuffer, C <: Checkpoint]
 (
   val appName: String,
   reader: StreamReader[S, I, C],
@@ -43,7 +43,8 @@ class LogXCore[S <: Source, K <: Sink, I <: StreamData, O <: StreamData, C <: Ch
         match {
           case Success(nextCheckpoint) =>
             instrumentors.foreach(_.updateStatus(reader, new StatusOK(s"Fetched records ${reader.fetchedRecords}")))
-            writer.readCheckpoint = Some(nextCheckpoint)
+            writer.previousCheckpoint = Some(lastCheckpoint)
+            writer.nextCheckpoint = Some(nextCheckpoint)
             if (reader.flushDownstream()) {
               reader.lastFlushTime = System.currentTimeMillis()
               reader.flushId = reader.flushId + 1

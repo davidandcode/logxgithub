@@ -5,7 +5,7 @@ package com.creditkarma.logx.base
   * @tparam S source of the reader
   * @tparam D type of the input payloads, which will go to transformer and eventually writer
   */
-trait StreamReader[S <: Source, D <: StreamData, C <: Checkpoint] extends Module with Instrumentable {
+trait StreamReader[S <: Source, D <: StreamBuffer, C <: Checkpoint] extends Module with Instrumentable {
   val source: S
   override def moduleType: ModuleType.Value = ModuleType.Reader
 

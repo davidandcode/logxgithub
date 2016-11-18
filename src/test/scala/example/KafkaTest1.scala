@@ -2,10 +2,10 @@ package example
 
 import java.io.{BufferedReader, FileReader}
 
-import com.creditkarma.logx.base.{Checkpoint, CheckpointService, Sink, Source, StreamData, StreamReader, Transformer, Writer, _}
+import com.creditkarma.logx.base.{Checkpoint, CheckpointService, Sink, Source, StreamBuffer, StreamReader, Transformer, Writer, _}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.sourcesink.Kafka
-import com.creditkarma.logx.impl.streamdata.SparkRDD
+import com.creditkarma.logx.impl.streambuffer.SparkRDD
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
 import com.creditkarma.logx.instrumentation.LogInfoInstrumentor
 import info.batey.kafka.unit.KafkaUnit
@@ -23,7 +23,7 @@ import scala.collection.mutable.ListBuffer
   */
 object KafkaTest1 {
 
-  class IdentityTransformer[I <: StreamData] extends Transformer[I, I]{
+  class IdentityTransformer[I <: StreamBuffer] extends Transformer[I, I]{
     override def transform(input: I): I = input
   }
 
@@ -40,7 +40,7 @@ object KafkaTest1 {
 
     override def write(data: SparkRDD[ConsumerRecord[String, String]]): KafkaCheckpoint = {
       collectedData ++= data.rdd.map(_.value()).collect()
-      readCheckpoint.get
+      nextCheckpoint.get
     }
   }
 
