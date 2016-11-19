@@ -41,18 +41,13 @@ object KafkaTest1 {
   }
 
   class InMemoryKafkaCheckpointService extends CheckpointService[KafkaCheckpoint]{
-    var lastCheckPoint: KafkaCheckpoint = null
+    val lastCheckPoint: KafkaCheckpoint = new KafkaCheckpoint()
     override def commitCheckpoint(cp: KafkaCheckpoint): Unit = {
-      lastCheckPoint = cp
+      lastCheckPoint.mergeKafkaCheckpoint(cp)
     }
 
     override def lastCheckpoint(): KafkaCheckpoint = {
-      if(lastCheckPoint == null){
-        new KafkaCheckpoint()
-      }
-      else{
-        lastCheckPoint
-      }
+      lastCheckPoint
     }
   }
 
@@ -153,10 +148,13 @@ object KafkaTest1 {
     TestKafkaServer.sendNextMessage(4)
     testLogX.runOneCycle()
     println(collectedData)
+    TestKafkaServer.sendNextMessage(4)
+    testLogX.runOneCycle()
+    println(collectedData)
 
     println(collectedData.size)
     println(TestKafkaServer.sentMessages.size)
-    assert(collectedData.toSet == TestKafkaServer.sentMessages.toSet)
+    assert(collectedData.toSet == TestKafkaServer.sentMessages.toSet && collectedData.size==TestKafkaServer.sentMessages.size)
 
     testLogX.close()
 
