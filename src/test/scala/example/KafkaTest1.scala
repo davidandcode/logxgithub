@@ -133,7 +133,7 @@ object KafkaTest1 {
     val collectedData: ListBuffer[String] = ListBuffer.empty
     val testLogX = new LogXCore(
       "test-logX",
-      new KafkaSparkRDDReader[String, String](kafkaParams).setMatchFetchRecords(1),
+      new KafkaSparkRDDReader[String, String](kafkaParams).setMaxFetchRecordsPerPartition(1),
       new IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]](),
       new KafkaSparkRDDMessageCollector(collectedData),
       new InMemoryKafkaCheckpointService()
@@ -142,7 +142,7 @@ object KafkaTest1 {
 
     testLogX.registerInstrumentor(LogInfoInstrumentor)
 
-    TestKafkaServer.sendNextMessage(5)
+    TestKafkaServer.sendNextMessage(6)
     testLogX.runOneCycle()
     println(collectedData)
     TestKafkaServer.sendNextMessage(4)

@@ -18,11 +18,11 @@ import scala.util.{Failure, Success, Try}
 class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
   extends Reader[SparkRDD[ConsumerRecord[K, V]], KafkaCheckpoint, Seq[OffsetRange]] {
 
-  var flushInterval: Long = 1000 // default in msec
-  var maxFetchedRecords: Long = 1000 // default records
+  private var flushInterval: Long = 1000 // default in msec
+  private var maxFetchedRecordsPerPartition: Long = 1000 // default records
 
-  def setMatchFetchRecords(n: Long) = {
-    maxFetchedRecords = n
+  def setMaxFetchRecordsPerPartition(n: Long) = {
+    maxFetchedRecordsPerPartition = Math.max(1, n) // cannot be 0
     this
   }
 
@@ -89,7 +89,11 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     val fetchedOffsetRanges =
       topicPartitionStartingOffsetMap.map{
         case (tp: TopicPartition, startingOffset: Long) =>
-          OffsetRange(tp, startingOffset, kafkaConsumer.position(tp))
+          val endPosition = kafkaConsumer.position(tp)
+          OffsetRange(
+            tp, startingOffset,
+            Math.min(startingOffset + maxFetchedRecordsPerPartition, endPosition)
+          )
       }.filter(_.count() > 0).toSeq
 
     statusUpdate(this, new StatusOK(s"Fetched offset ranges: ${fetchedOffsetRanges}"))
@@ -134,7 +138,7 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     * @return whether the currently fetched data should be send down the stream
     */
   override def flushDownstream(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Boolean = {
-    System.currentTimeMillis() - lastFlushTime >= flushInterval || getNumberOfRecords(data, delta) >= maxFetchedRecords
+    System.currentTimeMillis() - lastFlushTime >= flushInterval || getNumberOfRecords(data, delta) >= maxFetchedRecordsPerPartition
   }
 
   override def getNumberOfRecords(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Long = {
