@@ -9,35 +9,33 @@ import org.apache.spark.streaming.kafka010.OffsetRange
   * The reader is responsible for correctly interpreting the checkpoint, and generating new checkpoint for next batch
   * @param offsetRanges
   */
-class KafkaCheckpoint(offsetRanges: Seq[OffsetRange] = Seq.empty) extends Checkpoint{
-
-  val offsetRangesMap: collection.mutable.Map[TopicPartition, OffsetRange] =
-    collection.mutable.Map.empty ++ offsetRanges.map{osr=>osr.topicPartition()->osr}
-
-  override def fromEarliest: Boolean = offsetRanges.isEmpty
+class KafkaCheckpoint(val offsetRanges: Seq[OffsetRange] = Seq.empty) extends Checkpoint[Seq[OffsetRange], KafkaCheckpoint]{
 
   def nextStartingOffset(): Map[TopicPartition, Long] = {
-    allOffsetRanges.map{
+    offsetRanges.map{
       osr => osr.topicPartition() -> osr.untilOffset
     }.toMap
   }
 
-  def allOffsetRanges = offsetRangesMap.values
+  override def toString = offsetRanges.mkString(", ")
 
-  // for kafka offset ranges, topic partition with 0 records are not included, and therefore must be accumulated with all the previous offsetranges
-  def mergeKafkaCheckpoint(checkpoint: KafkaCheckpoint): KafkaCheckpoint = {
-    for(offsetRange <- checkpoint.allOffsetRanges){
+  override def mergeDelta(delta: Seq[OffsetRange]): KafkaCheckpoint = {
+    val offsetRangesMap = collection.mutable.Map.empty[TopicPartition, OffsetRange] ++
+      offsetRanges.map{
+        osr => osr.topicPartition() -> osr
+      }.toMap
+
+    for(offsetRange <- delta){
       offsetRangesMap.get(offsetRange.topicPartition()) match {
         case Some(existingOffsetRange) =>
           if(existingOffsetRange.untilOffset != offsetRange.fromOffset){
-            throw new Exception(s"New offsetRange not connected\nNew:${offsetRange}\nExisting:${existingOffsetRange}")
+            throw new Exception(s"OffsetRanges not connected\nNew:${offsetRange}\nExisting:${existingOffsetRange}")
           }
-          offsetRangesMap(offsetRange.topicPartition()) = offsetRange
+          offsetRangesMap(offsetRange.topicPartition()) =
+            OffsetRange(offsetRange.topicPartition(), existingOffsetRange.fromOffset, offsetRange.untilOffset)
         case None => offsetRangesMap += offsetRange.topicPartition()->offsetRange
       }
     }
-    this
+    new KafkaCheckpoint(offsetRangesMap.values.toSeq)
   }
-
-  override def toString = offsetRanges.toString()
 }

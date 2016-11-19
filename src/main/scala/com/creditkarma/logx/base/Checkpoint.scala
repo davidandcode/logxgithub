@@ -1,8 +1,15 @@
 package com.creditkarma.logx.base
 
 /**
-  * Created by yongjia.wang on 11/16/16.
+  *
+  * @tparam D delta of the checkpoint
+  * @tparam C checkpoint self type
   */
-trait Checkpoint {
-  def fromEarliest: Boolean
+trait Checkpoint[D, C <: Checkpoint[D, C]] {
+  /**
+    * Checkpoint should support merging operation to get new checkpoint by merging with delta
+    * @param delta
+    * @return
+    */
+  def mergeDelta(delta: D): C
 }

@@ -2,11 +2,9 @@ package com.creditkarma.logx.base
 
 /**
   *
-  * @tparam S source of the reader
-  * @tparam D type of the input payloads, which will go to transformer and eventually writer
+  * @tparam B type of the input buffer, which will go to transformer and then writer
   */
-trait StreamReader[S <: Source, D <: StreamBuffer, C <: Checkpoint] extends Module with Instrumentable {
-  val source: S
+trait Reader[B <: BufferedData, C <: Checkpoint[D, C], D] extends Module with Instrumentable {
   override def moduleType: ModuleType.Value = ModuleType.Reader
 
   def start(): Unit = {}
@@ -19,20 +17,21 @@ trait StreamReader[S <: Source, D <: StreamBuffer, C <: Checkpoint] extends Modu
     * Depending on the implementation, this method can potentially fetch data into buffer until it meets the flush condition
     * When using lazy read such as in Spark, there is no need to deal with buffering at read time, but only about meta data
     * @param checkpoint
-    * @return the next checkpoint if the fetched data are successfully written
+    * @return the delta of the fetched data
     *
     */
-  def fetchData(checkpoint: C): C
+  def fetchData(checkpoint: C): (B, D)
 
   /**
     * This is about streaming flush policy, can be based on data size, time interval or combination
     * @return whether the currently fetched data should be send down the stream
     */
-  def flushDownstream(): Boolean
+  def flushDownstream(data: B, delta: D): Boolean
 
-  def fetchedRecords: Long
+  def getNumberOfRecords(data: B, delta: D): Long
 
-  def fetchedData: D
+  def getBytes(data: B, delta: D): Long
+
 
   // The flush policy may look at this to make sure streaming interval is no more than the threshold
   var lastFlushTime: Long = 0

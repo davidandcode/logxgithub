@@ -20,4 +20,8 @@ trait Instrumentable {
         _instrumentors += instrumentor.name -> instrumentor
     }
   }
+
+  def statusUpdate(module: Module, status: Status): Unit = {
+    instrumentors.foreach(_.updateStatus(module, status))
+  }
 }

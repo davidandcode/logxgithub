@@ -10,7 +10,7 @@ trait Status {
   override def toString = s"$statusCode($message)"
 }
 
-class StatusOK (msg: => String) extends Status {
+class StatusOK (msg: String) extends Status {
   override val statusCode = StatusCode.OK
   override def message: String = msg
 }

@@ -2,17 +2,17 @@ package example
 
 import java.io.{BufferedReader, FileReader}
 
-import com.creditkarma.logx.base.{Checkpoint, CheckpointService, Sink, Source, StreamBuffer, StreamReader, Transformer, Writer, _}
+import com.creditkarma.logx.base.{BufferedData, CheckpointService, Transformer, Writer, _}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
-import com.creditkarma.logx.impl.sourcesink.Kafka
 import com.creditkarma.logx.impl.streambuffer.SparkRDD
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
 import com.creditkarma.logx.instrumentation.LogInfoInstrumentor
 import info.batey.kafka.unit.KafkaUnit
-import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer}
+import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializer}
 import org.apache.log4j.{Level, LogManager}
+import org.apache.spark.streaming.kafka010.OffsetRange
 import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.JavaConverters._
@@ -23,27 +23,25 @@ import scala.collection.mutable.ListBuffer
   */
 object KafkaTest1 {
 
-  class IdentityTransformer[I <: StreamBuffer] extends Transformer[I, I]{
+  class IdentityTransformer[I <: BufferedData] extends Transformer[I, I]{
     override def transform(input: I): I = input
   }
 
-  class DummySink extends Sink{
-    override def name: String = "dummy sink"
-  }
 
-  class KafkaSparkRDDMessageCollector(collectedData: ListBuffer[String]) extends Writer[DummySink, SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint]{
-    override val sink = null
+  class KafkaSparkRDDMessageCollector(collectedData: ListBuffer[String])
+    extends Writer[SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint, Seq[OffsetRange]]{
 
-    override def write(data: SparkRDD[ConsumerRecord[String, String]]): KafkaCheckpoint = {
+    override def write(data: SparkRDD[ConsumerRecord[String, String]], delta: Seq[OffsetRange]): Seq[OffsetRange] = {
       collectedData ++= data.rdd.map(_.value()).collect()
-      nextCheckpoint.get
+      delta
     }
+
   }
 
   class InMemoryKafkaCheckpointService extends CheckpointService[KafkaCheckpoint]{
-    val lastCheckPoint: KafkaCheckpoint = new KafkaCheckpoint()
+    var lastCheckPoint: KafkaCheckpoint = new KafkaCheckpoint()
     override def commitCheckpoint(cp: KafkaCheckpoint): Unit = {
-      lastCheckPoint.mergeKafkaCheckpoint(cp)
+      lastCheckPoint = cp
     }
 
     override def lastCheckpoint(): KafkaCheckpoint = {
@@ -51,9 +49,11 @@ object KafkaTest1 {
     }
   }
 
+  val (zkPort, kafkaPort) = (5556, 5558)
+
   object TestKafkaServer {
 
-    val kafkaUnitServer = new KafkaUnit(5556, 5558)
+    val kafkaUnitServer = new KafkaUnit(zkPort, kafkaPort)
     val kp = new KafkaProducer[String, String](kafkaParams.asJava)
 
     def start(): Unit = {
@@ -106,7 +106,7 @@ object KafkaTest1 {
   }
 
   val kafkaParams = Map[String, Object](
-    "bootstrap.servers" -> "localhost:5558",
+    "bootstrap.servers" -> s"localhost:$kafkaPort",
     "key.serializer" -> classOf[StringSerializer],
     "key.deserializer" -> classOf[StringDeserializer],
     "value.serializer" -> classOf[StringSerializer],
@@ -133,7 +133,7 @@ object KafkaTest1 {
     val collectedData: ListBuffer[String] = ListBuffer.empty
     val testLogX = new LogXCore(
       "test-logX",
-      new KafkaSparkRDDReader[String, String](new Kafka(kafkaParams)).setMatchFetchRecords(1),
+      new KafkaSparkRDDReader[String, String](kafkaParams).setMatchFetchRecords(1),
       new IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]](),
       new KafkaSparkRDDMessageCollector(collectedData),
       new InMemoryKafkaCheckpointService()
@@ -154,7 +154,7 @@ object KafkaTest1 {
 
     println(collectedData.size)
     println(TestKafkaServer.sentMessages.size)
-    assert(collectedData.toSet == TestKafkaServer.sentMessages.toSet && collectedData.size==TestKafkaServer.sentMessages.size)
+    assert(collectedData.sorted == TestKafkaServer.sentMessages.sorted)
 
     testLogX.close()
 

@@ -1,21 +1,17 @@
 package com.creditkarma.logx.base
 
-import com.creditkarma.logx.instrumentation._
-import com.creditkarma.logx.utils.LazyLog
-
-import scala.collection.mutable.ListBuffer
 import scala.util.{Failure, Success, Try}
 
 /**
   * Created by yongjia.wang on 11/16/16.
   */
 
-class LogXCore[S <: Source, K <: Sink, I <: StreamBuffer, O <: StreamBuffer, C <: Checkpoint]
+class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[D, C], D]
 (
   val appName: String,
-  reader: StreamReader[S, I, C],
+  reader: Reader[I, C, D],
   transformer: Transformer[I, O],
-  writer: Writer[K, O, C],
+  writer: Writer[O, C, D],
   checkPointService: CheckpointService[C]
 ) extends Module with Instrumentable {
 
@@ -38,51 +34,46 @@ class LogXCore[S <: Source, K <: Sink, I <: StreamBuffer, O <: StreamBuffer, C <
     Try(checkPointService.lastCheckpoint())
     match {
       case Success(lastCheckpoint) =>
-        instrumentors.foreach(_.updateStatus(checkPointService, new StatusOK(s"Got last checkpoint ${lastCheckpoint}")))
+        statusUpdate(checkPointService, new StatusOK(s"Got last checkpoint ${lastCheckpoint}"))
         Try(reader.fetchData(lastCheckpoint))
         match {
-          case Success(nextCheckpoint) =>
-            instrumentors.foreach(_.updateStatus(reader, new StatusOK(s"Fetched records ${reader.fetchedRecords}")))
-            writer.previousCheckpoint = Some(lastCheckpoint)
-            writer.nextCheckpoint = Some(nextCheckpoint)
-            if (reader.flushDownstream()) {
+          case Success((fetchedData, delta)) =>
+            statusUpdate(reader, new StatusOK(s"Fetched records ${reader.getNumberOfRecords(fetchedData, delta)}"))
+            statusUpdate(reader, new StatusOK(s"Fetched Bytes ${reader.getBytes(fetchedData, delta)}"))
+            if (reader.flushDownstream(fetchedData, delta)) {
               reader.lastFlushTime = System.currentTimeMillis()
               reader.flushId = reader.flushId + 1
               writer.flushId = reader.flushId
-              instrumentors.foreach(_.updateStatus(reader, new StatusOK("ready to flush")))
-              Try(transformer.transform(reader.fetchedData))
+              statusUpdate(reader, new StatusOK("ready to flush"))
+              Try(transformer.transform(fetchedData))
               match {
-                case Success(data) =>
-                  Try(writer.write(data)) match {
-                    case Success(writerCheckpoint) =>
-                      instrumentors.foreach(_.updateStatus(writer, new StatusOK("ready to checkpoint")))
-
-                      Try(checkPointService.commitCheckpoint(writerCheckpoint))
+                case Success(dataToWrite) =>
+                  Try(writer.write(dataToWrite, delta)) match {
+                    case Success(writerDelta) =>
+                      statusUpdate(writer, new StatusOK("ready to checkpoint"))
+                      Try(checkPointService.commitCheckpoint(lastCheckpoint.mergeDelta(writerDelta)))
                       match {
                         case Success(_) =>
-                          instrumentors.foreach(_.updateStatus(checkPointService,
-                            new StatusOK("checkpoint success")))
+                          statusUpdate(checkPointService, new StatusOK("checkpoint success"))
                         case Failure(f) =>
-                          instrumentors.foreach(_.updateStatus(checkPointService, new StatusError(f)))
+                          statusUpdate(checkPointService, new StatusError(f))
                       }
-
                     case Failure(f)=>
-                      instrumentors.foreach(_.updateStatus(writer, new StatusError(f)))
+                      statusUpdate(writer, new StatusError(f))
                   }
                 case Failure(f) =>
-                  instrumentors.foreach(_.updateStatus(transformer, new StatusError(f)))
+                  statusUpdate(transformer, new StatusError(f))
               }
             }
             else {
               // not enough to flush downstream, just do nothing and wait for next cycle
-              instrumentors.foreach(_.updateStatus(reader, new StatusOK("not enough to flush")))
+              statusUpdate(reader, new StatusOK("not enough to flush"))
             }
           case Failure(f) =>
-            instrumentors.foreach(_.updateStatus(reader, new StatusError(f)))
+            statusUpdate(reader, new StatusError(f))
         }
       case Failure(f) =>
-        instrumentors.foreach(_.updateStatus(checkPointService, new StatusError(f)))
-
+        statusUpdate(checkPointService, new StatusError(f))
     }
     instrumentors.foreach(_.cycleCompleted)
   }
