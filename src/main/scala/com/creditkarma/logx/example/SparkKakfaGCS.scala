@@ -1,4 +1,4 @@
-package example
+package com.creditkarma.logx.example
 
 import java.io.{ByteArrayInputStream, InputStream, SequenceInputStream}
 
@@ -28,7 +28,7 @@ object SparkKafkaGCS {
     "key.deserializer" -> classOf[StringDeserializer],
     "value.serializer" -> classOf[StringSerializer],
     "value.deserializer" -> classOf[StringDeserializer],
-    "group.id" -> "example",
+    "group.id" -> "com/creditkarma/logx/example",
     "auto.offset.reset" -> "latest",
     "enable.auto.commit" -> (false: java.lang.Boolean)
   ).asJava

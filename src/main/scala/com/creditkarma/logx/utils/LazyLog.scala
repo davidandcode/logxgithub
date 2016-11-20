@@ -1,5 +1,4 @@
 package com.creditkarma.logx.utils
-
 /**
   * Created by yongjia.wang on 11/16/16.
   */
@@ -13,16 +12,6 @@ import org.apache.log4j.{ConsoleAppender, Level, LogManager, PatternLayout}
 trait LazyLog {
 
   lazy val logger = LogManager.getLogger(this.getClass)
-
-  def printLogToConsole() = {
-    val appender = new ConsoleAppender(new PatternLayout("%d{yy/MM/dd HH:mm:ss} %p %c{1}: %m%n"))
-    logger.addAppender(appender)
-  }
-
-  def setLevel(level: Level) = {
-    logger.setLevel(level)
-    this
-  }
 
   @inline final def trace(message: => String) {
     logger.trace(lazyMessage(message))

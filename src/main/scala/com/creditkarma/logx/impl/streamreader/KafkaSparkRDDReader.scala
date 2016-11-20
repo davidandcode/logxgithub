@@ -129,13 +129,15 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     * @param topic
     * @return
     */
-  private def topicFilter(topic: String): Boolean = true
+  private def topicFilter(topic: String): Boolean = {
+    topic.indexOf("__consumer_offsets") == -1
+  }
 
   //override def fetchedRecords: Long = if(_fetchedOffsetRanges.isEmpty) 0 else _fetchedOffsetRanges.map(_.count()).sum
   /**
     * This is about streaming flush policy, can be based on data size, time interval or combination
     *
-    * @return whether the currently fetched data should be send down the stream
+    * @return whether the currently fetched/buffered data should be flushed down the stream
     */
   override def flushDownstream(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Boolean = {
     System.currentTimeMillis() - lastFlushTime >= flushInterval || getNumberOfRecords(data, delta) >= maxFetchedRecordsPerPartition

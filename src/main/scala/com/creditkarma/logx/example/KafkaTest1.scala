@@ -1,4 +1,4 @@
-package example
+package com.creditkarma.logx.example
 
 import java.io.{BufferedReader, FileReader}
 
@@ -17,10 +17,12 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable.ListBuffer
+import scala.util.{Failure, Success, Try}
 
 /**
   * Created by yongjia.wang on 11/17/16.
   */
+
 object KafkaTest1 {
 
   class IdentityTransformer[I <: BufferedData] extends Transformer[I, I]{
@@ -122,7 +124,7 @@ object KafkaTest1 {
     LogManager.getLogger("kafka").setLevel(Level.WARN)
 
 
-    SparkContext.getOrCreate(new SparkConf().setAppName("test").setMaster("local[2]")
+    val sc = SparkContext.getOrCreate(new SparkConf().setAppName("test").setMaster("local[2]")
       .set("spark.driver.host", "127.0.0.1")
       // set local host explicitly, the call through java.net.InetAddress.getLocalHost on laptop with VPN can be inconsistent
       // Also if it returns IPV6, Spark won't work with it
@@ -144,21 +146,24 @@ object KafkaTest1 {
 
     TestKafkaServer.sendNextMessage(6)
     testLogX.runOneCycle()
-    println(collectedData)
+    //println(collectedData)
     TestKafkaServer.sendNextMessage(4)
     testLogX.runOneCycle()
-    println(collectedData)
+    //println(collectedData)
     TestKafkaServer.sendNextMessage(4)
     testLogX.runOneCycle()
-    println(collectedData)
+    //println(collectedData)
 
     println(collectedData.size)
     println(TestKafkaServer.sentMessages.size)
     assert(collectedData.sorted == TestKafkaServer.sentMessages.sorted)
 
     testLogX.close()
-
+    sc.stop()
+    Thread.sleep(1000)
     TestKafkaServer.stop()
+
+    println("Demo succeeded")
   }
 
   def loadDataToLocalKafka(kafkaUnitServer: KafkaUnit) = {

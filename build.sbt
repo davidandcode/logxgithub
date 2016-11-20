@@ -15,3 +15,6 @@ libraryDependencies += "com.google.cloud.bigdataoss" % "gcs-connector" % "1.5.4-
 libraryDependencies += "info.batey.kafka" % "kafka-unit" % "0.6"
 
 libraryDependencies += "org.apache.geode" % "gemfire-joptsimple" % "1.0.0-incubating.M1"
+
+mainClass in (Compile, run) := Some("com.creditkarma.logx.example.KafkaTest1")
+
