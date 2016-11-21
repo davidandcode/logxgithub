@@ -24,4 +24,8 @@ trait Instrumentable {
   def statusUpdate(module: Module, status: Status): Unit = {
     instrumentors.foreach(_.updateStatus(module, status))
   }
+
+  def metricUpdate(module: Module, metrics: Map[MetricArgs.Value, Any]) = {
+    instrumentors.foreach(_.updateMetric(module, metrics))
+  }
 }

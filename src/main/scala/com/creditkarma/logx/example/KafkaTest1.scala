@@ -17,7 +17,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable.ListBuffer
-import scala.util.{Failure, Success, Try}
 
 /**
   * Created by yongjia.wang on 11/17/16.
@@ -31,13 +30,21 @@ object KafkaTest1 {
 
 
   class KafkaSparkRDDMessageCollector(collectedData: ListBuffer[String])
-    extends Writer[SparkRDD[ConsumerRecord[String, String]], KafkaCheckpoint, Seq[OffsetRange]]{
+    extends Writer[SparkRDD[ConsumerRecord[String, String]], Seq[OffsetRange], (Long, Long)]{
 
-    override def write(data: SparkRDD[ConsumerRecord[String, String]], delta: Seq[OffsetRange]): Seq[OffsetRange] = {
-      collectedData ++= data.rdd.map(_.value()).collect()
-      delta
+    override def write(data: SparkRDD[ConsumerRecord[String, String]]): (Long, Long) = {
+      val inData = data.rdd.map(_.value()).collect()
+      collectedData ++= inData
+      (inData.size, inData.map(_.size).sum)
     }
 
+    override def inBytes(meta: (Long, Long)): Long = meta._2
+
+    override def inRecords(meta: (Long, Long)): Long = meta._1
+
+    override def outBytes(meta: (Long, Long)): Long = meta._2
+
+    override def outRecords(meta: (Long, Long)): Long = meta._1
   }
 
   class InMemoryKafkaCheckpointService extends CheckpointService[KafkaCheckpoint]{

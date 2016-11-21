@@ -18,6 +18,6 @@ trait Instrumentor {
 
   def updateStatus(module: Module, status: Status): Unit
 
-  def updateMetric(module: Module, args: Map[MetricArgs.Value, Any] = Map.empty): Unit
+  def updateMetric(module: Module, metrics: Map[MetricArgs.Value, Any] = Map.empty): Unit
 
 }

@@ -16,7 +16,7 @@ import scala.util.{Failure, Success, Try}
   * Created by yongjia.wang on 11/16/16.
   */
 class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
-  extends Reader[SparkRDD[ConsumerRecord[K, V]], KafkaCheckpoint, Seq[OffsetRange]] {
+  extends Reader[SparkRDD[ConsumerRecord[K, V]], KafkaCheckpoint, Seq[OffsetRange], Seq[OffsetRange]] {
 
   private var flushInterval: Long = 1000 // default in msec
   private var maxFetchedRecordsPerPartition: Long = 1000 // default records
@@ -54,7 +54,7 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     }
   }
 
-  override def fetchData(checkpoint: KafkaCheckpoint): (SparkRDD[ConsumerRecord[K, V]], Seq[OffsetRange]) = {
+  override def fetchData(lastFlushTime: Long, checkpoint: KafkaCheckpoint): (SparkRDD[ConsumerRecord[K, V]], Seq[OffsetRange]) = {
 
     val topicPartitions: Seq[TopicPartition] = kafkaConsumer.listTopics().asScala.filter {
       case (topic: String, _) => topicFilter(topic)
@@ -139,16 +139,20 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     *
     * @return whether the currently fetched/buffered data should be flushed down the stream
     */
-  override def flushDownstream(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Boolean = {
-    System.currentTimeMillis() - lastFlushTime >= flushInterval || getNumberOfRecords(data, delta) >= maxFetchedRecordsPerPartition
+  override def flush(lastFlushTime: Long, meta: Seq[OffsetRange]): Boolean = {
+    System.currentTimeMillis() - lastFlushTime >= flushInterval || inRecords(meta) >= maxFetchedRecordsPerPartition
   }
 
-  override def getNumberOfRecords(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Long = {
-    if(delta.isEmpty) 0 else delta.map(_.count()).sum
+  override def inRecords(meta: Seq[OffsetRange]): Long = {
+    if(meta.isEmpty) 0 else meta.map(_.count()).sum
   }
 
-  override def getBytes(data: SparkRDD[ConsumerRecord[K, V]], delta: Seq[OffsetRange]): Long = {
+  override def inBytes(meta: Seq[OffsetRange]): Long = {
     statusUpdate(this, new StatusOK("SparkRDD read bytes info is not available at read time (this is expected)"))
     0
   }
+
+  // for this reader, read meta is the same as read delta,
+  // but in general meta data is superset of delta
+  override def getDelta(meta: Seq[OffsetRange]): Seq[OffsetRange] = meta
 }

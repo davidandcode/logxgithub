@@ -6,8 +6,7 @@ package com.creditkarma.logx.base
 object MetricArgs extends Enumeration{
   val
   KafkaTopic,
-  ReaderDataCount, ReaderDataBytes,
-  WriterDataCount, WriterDataBytes,
-  FlushedDataCount, FlushedDataBytes,
-  CheckpointBytes = Value
+  InRecords, InBytes,
+  OutRecords, OutBytes
+  = Value
 }

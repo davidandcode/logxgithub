@@ -13,49 +13,29 @@ trait LazyLog {
 
   lazy val logger = LogManager.getLogger(this.getClass)
 
-  @inline final def trace(message: => String) {
-    logger.trace(lazyMessage(message))
-  }
-
-  @inline final def trace(message: => String, t: Throwable) {
+  @inline final def trace(message: => String, t: Throwable = null) {
     logger.trace(lazyMessage(message), t)
   }
 
-  @inline final def debug(message: => String) {
-    logger.debug(lazyMessage(message))
-  }
-
-  @inline final def debug(message: => String, t: Throwable) {
+  @inline final def debug(message: => String, t: Throwable = null) {
     logger.debug(lazyMessage(message), t)
   }
 
-  @inline final def info(message: => String) {
-    logger.info(lazyMessage(message))
-  }
-
-  @inline final def info(message: => String, t: Throwable) {
+  @inline final def info(message: => String, t: Throwable = null) {
     logger.info(lazyMessage(message), t)
   }
 
-  @inline final def warn(message: => String) {
-    logger.warn(lazyMessage(message))
-  }
-
-  @inline final def warn(message: => String, t: Throwable) {
+  @inline final def warn(message: => String, t: Throwable = null) {
     logger.warn(lazyMessage(message), t)
   }
 
-  @inline final def error(message: => String) {
-    logger.error(lazyMessage(message))
-  }
-
-  @inline final def error(message: => String, t: Throwable) {
+  @inline final def error(message: => String, t: Throwable = null) {
     logger.error(lazyMessage(message), t)
   }
 
   // fatal does not make much sense for logging, although log4j supports it
-  @inline final def fatal(message: => String) {
-    logger.fatal(lazyMessage(message))
+  @inline final def fatal(message: => String, t: Throwable = null) {
+    logger.fatal(lazyMessage(message), t)
   }
 
   // wire the lazy by-name parameter to the toString method which will be invoked by logger only when passed the level

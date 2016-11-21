@@ -6,14 +6,14 @@ import scala.util.{Failure, Success, Try}
   * Created by yongjia.wang on 11/16/16.
   */
 
-class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[D, C], D]
+class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], Delta]
 (
   val appName: String,
-  reader: Reader[I, C, D],
+  reader: Reader[I, C, Delta, _],
   transformer: Transformer[I, O],
-  writer: Writer[O, C, D],
+  writer: Writer[O, Delta, _],
   checkPointService: CheckpointService[C]
-) extends Module with Instrumentable {
+) extends Module {
 
   override def moduleType: ModuleType.Value = ModuleType.Core
   override def registerInstrumentor(instrumentor: Instrumentor): Unit = {
@@ -24,54 +24,70 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[D, C], D]
     checkPointService.registerInstrumentor(instrumentor)
   }
 
+  var lastFlushTime: Long = 0
   def runOneCycle() = {
-
     instrumentors.foreach(_.cycleStarted)
-
     /**
-      * None of the modules should handle any exception, but propagate the exception messages back here as part of instrumentation
+      * None of the module implementations should swallow exception
       */
-    Try(checkPointService.lastCheckpoint())
+    // 1. Load checkpoint
+    Try(checkPointService.executeLoad())
     match {
+      // 1a. Load checkpoint success
       case Success(lastCheckpoint) =>
         statusUpdate(checkPointService, new StatusOK(s"Got last checkpoint ${lastCheckpoint}"))
-        Try(reader.fetchData(lastCheckpoint))
+        // 2. Read
+        Try(reader.execute(lastFlushTime, lastCheckpoint))
         match {
-          case Success((fetchedData, delta)) =>
-            statusUpdate(reader, new StatusOK(s"Fetched records ${reader.getNumberOfRecords(fetchedData, delta)}"))
-            statusUpdate(reader, new StatusOK(s"Fetched Bytes ${reader.getBytes(fetchedData, delta)}"))
-            if (reader.flushDownstream(fetchedData, delta)) {
-              reader.lastFlushTime = System.currentTimeMillis()
-              reader.flushId = reader.flushId + 1
-              writer.flushId = reader.flushId
+          // 2a. Read success
+          case Success((inData, inDelta, flush)) =>
+            // 2a-1. Flush
+            if (flush) {
+              lastFlushTime = System.currentTimeMillis()
               statusUpdate(reader, new StatusOK("ready to flush"))
-              Try(transformer.transform(fetchedData))
+              // 3 transform
+              Try(transformer.execute(inData))
               match {
-                case Success(dataToWrite) =>
-                  Try(writer.write(dataToWrite, delta)) match {
-                    case Success(writerDelta) =>
+                // 3a. Transform success
+                case Success(outData) =>
+                  // 4. Write
+                  Try(writer.execute(outData)) match {
+                    // 4a. Write success
+                    case Success(outDelta) =>
                       statusUpdate(writer, new StatusOK("ready to checkpoint"))
-                      Try(checkPointService.commitCheckpoint(lastCheckpoint.mergeDelta(writerDelta)))
+                      // 5. Checkpoint
+                      Try(
+                        checkPointService.executeCommit(
+                        lastCheckpoint
+                          .mergeDelta(outDelta.getOrElse(inDelta)))
+                      )
                       match {
+                        // 5a. Checkpoint success
                         case Success(_) =>
                           statusUpdate(checkPointService, new StatusOK("checkpoint success"))
+                        // 5b. Checkpoint failure
                         case Failure(f) =>
                           statusUpdate(checkPointService, new StatusError(f))
                       }
+                    // 4b. Write failure
                     case Failure(f)=>
                       statusUpdate(writer, new StatusError(f))
                   }
+                // 3b. Transform failure
                 case Failure(f) =>
                   statusUpdate(transformer, new StatusError(f))
               }
             }
+            // 2a-b. Not flush
             else {
               // not enough to flush downstream, just do nothing and wait for next cycle
               statusUpdate(reader, new StatusOK("not enough to flush"))
             }
+          //2b. Read Failure
           case Failure(f) =>
             statusUpdate(reader, new StatusError(f))
         }
+      //1b. load checkpoint failure
       case Failure(f) =>
         statusUpdate(checkPointService, new StatusError(f))
     }

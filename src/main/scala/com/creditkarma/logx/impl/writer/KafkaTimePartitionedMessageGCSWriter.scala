@@ -13,7 +13,18 @@ class KafkaTimePartitionedMessageGCSWriter()
   extends Writer [SparkRDD[KafkaTimePartitionedMessage], KafkaCheckpoint, Seq[OffsetRange]]{
 
   //re-use gcs client object if possible
+  /**
+    *
+    * @param data Data in the buffer to be flushed
+    * @return The delta successfully written for the purpose of checkpoint. If all data are written, it's the same as delta
+    */
+  override def write(data: SparkRDD[KafkaTimePartitionedMessage]): Seq[OffsetRange] = ???
 
-  override def write(data: SparkRDD[KafkaTimePartitionedMessage], delta: Seq[OffsetRange]): Seq[OffsetRange] = null
+  override def inBytes(meta: Seq[OffsetRange]): Long = ???
 
+  override def inRecords(meta: Seq[OffsetRange]): Long = ???
+
+  override def outBytes(meta: Seq[OffsetRange]): Long = ???
+
+  override def outRecords(meta: Seq[OffsetRange]): Long = ???
 }

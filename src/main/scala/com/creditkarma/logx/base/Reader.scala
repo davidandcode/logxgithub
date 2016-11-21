@@ -1,10 +1,11 @@
 package com.creditkarma.logx.base
 
+import scala.util.{Failure, Success, Try}
+
 /**
-  *
-  * @tparam B type of the input buffer, which will go to transformer and then writer
+  * @tparam Meta meta data of the read operation, used to construct checkpoint delta and metrics
   */
-trait Reader[B <: BufferedData, C <: Checkpoint[D, C], D] extends Module with Instrumentable {
+trait Reader[B <: BufferedData, C <: Checkpoint[D, C], D, Meta] extends Module {
   override def moduleType: ModuleType.Value = ModuleType.Reader
 
   def start(): Unit = {}
@@ -20,22 +21,31 @@ trait Reader[B <: BufferedData, C <: Checkpoint[D, C], D] extends Module with In
     * @return the delta of the fetched data
     *
     */
-  def fetchData(checkpoint: C): (B, D)
+  def fetchData(lastFlushTime: Long, checkpoint: C): (B, Meta)
 
   /**
     * This is about streaming flush policy, can be based on data size, time interval or combination
     * @return whether the currently fetched data should be send down the stream
     */
-  def flushDownstream(data: B, delta: D): Boolean
+  def flush(lastFlushTime: Long, meta: Meta): Boolean
 
-  def getNumberOfRecords(data: B, delta: D): Long
+  def inRecords(meta: Meta): Long
+  def inBytes(meta: Meta): Long
 
-  def getBytes(data: B, delta: D): Long
+  def getDelta(meta: Meta): D
 
-
-  // The flush policy may look at this to make sure streaming interval is no more than the threshold
-  var lastFlushTime: Long = 0
-
-  var flushId: Long = 0
-
+  final def execute(lastFlushTime: Long, checkpoint: C): (B, D, Boolean) = {
+    Try(fetchData(lastFlushTime, checkpoint))
+    match {
+      case Success((data, meta)) =>
+        metricUpdate(
+          Map(
+            MetricArgs.InRecords->inRecords(meta),
+            MetricArgs.InBytes->inBytes(meta)
+          )
+        )
+        (data, getDelta(meta), flush(lastFlushTime, meta))
+      case Failure(f) => throw f
+    }
+  }
 }
