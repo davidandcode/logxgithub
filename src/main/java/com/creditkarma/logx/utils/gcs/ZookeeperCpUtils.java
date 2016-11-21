@@ -6,6 +6,7 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,93 +15,133 @@ import java.util.List;
  */
 public class ZookeeperCpUtils {
 
-    private static ZooKeeperConnection conn = new ZooKeeperConnection();
-
-    private static ZooKeeper zk = null;
-
-
-    public static ZooKeeper getAZookeeper(String hostport) {
-
-
-
-        ZooKeeper result = null;
-
-        if(zk == null) {
-
-            try {
-                result = conn.connect(hostport);
-                zk = result;
-            } catch (Exception e) {
-
-            }
-        }else{
-            result = zk;
-        }
-
-
-        return result;
-
-    }
-
-    public static void close(ZooKeeperConnection conn) throws InterruptedException {
-        conn.close();
-    }
 
 
 
 
-    public static void shutZooKeeper(ZooKeeper zk){
+
+    // shut down zk first and conn then
+    // (start a conn and then start zk)
+
+
+    public static void create(String path, byte[] data,String hostport) throws
+            KeeperException,InterruptedException {
+
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
         try {
+
+            zk = conn.connect(hostport);
+            zk.create(path, data, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             zk.close();
         } catch (Exception e){
 
         }
+
+        conn.close();
+
     }
 
 
-    public static void create(String path, byte[] data, ZooKeeper zk) throws
+    public static void delete(String path,String hostport) throws KeeperException,InterruptedException {
+
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
+        try {
+
+            zk = conn.connect(hostport);
+            zk.delete(path,zk.exists(path,true).getVersion());
+            zk.close();
+        } catch (Exception e){
+
+        }
+
+        conn.close();
+
+    }
+
+
+    public static boolean znodeExists(String path,String hostport) throws
             KeeperException,InterruptedException {
-        zk.create(path, data, ZooDefs.Ids.OPEN_ACL_UNSAFE,
-                CreateMode.PERSISTENT);
+
+        boolean result = false;
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
+        try {
+
+            zk = conn.connect(hostport);
+            result= zk.exists(path, true) == null?false:true;
+            zk.close();
+        } catch (Exception e){
+
+        }
+
+        conn.close();
+        return result;
+
     }
 
-
-    public static void delete(String path,ZooKeeper zk) throws KeeperException,InterruptedException {
-        zk.delete(path,zk.exists(path,true).getVersion());
-    }
-
-
-    public static boolean znodeExists(String path,ZooKeeper zk) throws
-            KeeperException,InterruptedException {
-        return zk.exists(path, true) == null?false:true;
-    }
-
-    public static List<String> getChildren(String path,ZooKeeper zk) throws
+    public static List<String> getChildren(String path,String hostport) throws
             KeeperException,InterruptedException {
 
         List<String> result = new ArrayList<String>();
 
-        if(znodeExists(path,zk))
-            return zk.getChildren(path,false);
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
+        try {
 
+            zk = conn.connect(hostport);
+            if(znodeExists(path,hostport))
+                result = zk.getChildren(path,false);
+            zk.close();
+        } catch (Exception e){
+
+        }
+
+        conn.close();
         return result;
+
     }
 
 
-    public static byte[] getData(String path,ZooKeeper zk) throws Exception {
+    public static byte[] getData(String path,String hostport) throws Exception {
         byte[] result = null;
 
-        if(znodeExists(path,zk))
-            return zk.getData(path,false,null);
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
+        try {
 
+            zk = conn.connect(hostport);
+            if(znodeExists(path,hostport))
+                result = zk.getData(path,false,null);
+            zk.close();
+        } catch (Exception e){
 
+        }
+
+        conn.close();
         return result;
+
 
     }
 
-    public static void update(String path, byte[] data,ZooKeeper zk) throws
+    public static void update(String path, byte[] data,String hostport) throws
             KeeperException,InterruptedException {
-        zk.setData(path, data, zk.exists(path,true).getVersion());
+
+        ZooKeeperConnection conn = new ZooKeeperConnection();
+        ZooKeeper zk = null;
+        try {
+
+            zk = conn.connect(hostport);
+            zk.setData(path, data, zk.exists(path,true).getVersion());
+            zk.close();
+        } catch (Exception e){
+
+        }
+
+        conn.close();
+
+
     }
 
 
