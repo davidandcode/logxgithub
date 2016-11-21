@@ -7,7 +7,7 @@ trait Instrumentable {
 
   private val _instrumentors: scala.collection.mutable.Map[String, Instrumentor] = scala.collection.mutable.Map.empty
 
-  def instrumentors = _instrumentors.values
+  private[base] def instrumentors = _instrumentors.values
 
   def registerInstrumentor(instrumentor: Instrumentor): Unit = {
     _instrumentors.get(instrumentor.name) match {
@@ -25,7 +25,15 @@ trait Instrumentable {
     instrumentors.foreach(_.updateStatus(module, status))
   }
 
-  def metricUpdate(module: Module, metrics: Map[MetricArgs.Value, Any]) = {
+  def metricUpdate(module: Module, metrics: Map[MetricArgs.Value, Any]): Unit = {
     instrumentors.foreach(_.updateMetric(module, metrics))
+  }
+
+  def cycleStarted(): Unit = {
+    instrumentors.foreach(_.cycleStarted)
+  }
+
+  def cycleCompleted(): Unit = {
+    instrumentors.foreach(_.cycleCompleted())
   }
 }

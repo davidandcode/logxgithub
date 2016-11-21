@@ -7,7 +7,7 @@ import scala.util.{Failure, Success, Try}
   * @tparam Delta specific to the reading source, writer can oprtionally return delta for partial commit to checkpoint
   * @tparam Meta meta data of the read operation, used to construct checkpoint delta and metrics
   */
-trait Writer [B <: BufferedData, Delta, Meta] extends Module {
+trait Writer[B <: BufferedData, Delta, Meta] extends Module {
   def start(): Unit = {}
   def close(): Unit = {}
   /**

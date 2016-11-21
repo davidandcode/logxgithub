@@ -18,39 +18,44 @@ import scala.util.{Failure, Success, Try}
 class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
   extends Reader[SparkRDD[ConsumerRecord[K, V]], KafkaCheckpoint, Seq[OffsetRange], Seq[OffsetRange]] {
 
-  private var flushInterval: Long = 1000 // default in msec
-  private var maxFetchedRecordsPerPartition: Long = 1000 // default records
+  private val DefaultFlushInterval: Long = 1000
+  private val DefaultMaxRecordsPerPartition: Long = 1000
 
-  def setMaxFetchRecordsPerPartition(n: Long) = {
-    maxFetchedRecordsPerPartition = Math.max(1, n) // cannot be 0
-    this
+  private var flushInterval: Long = DefaultFlushInterval // default in msec
+  private var maxRecordsPerPartition: Long = DefaultMaxRecordsPerPartition // default records
+
+  // configurations be chained through configuration object as opposed to the reader
+  def setMaxFetchRecordsPerPartition(n: Long): Unit = {
+    maxRecordsPerPartition = Math.max(1, n) // cannot be 0
   }
 
-  def setFlushInterval(t: Long) = {
+  def setFlushInterval(t: Long): Unit = {
     flushInterval = t
-    this
   }
 
   def kafkaConsumer: KafkaConsumer[K, V] = {
-    if (_kafkaConsumer == null) {
-      statusUpdate(this, new StatusOK(s"Creating Kafka consumer with ${kafkaParams}"))
-      Try(
-        new KafkaConsumer[K, V](kafkaParams.asJava)
-      ) match {
-        case Success(kc) =>
-          _kafkaConsumer = kc
-        case Failure(f) =>
-          statusUpdate(this, new StatusError(new Exception(s"Failed to create Kafka consumer: ${kafkaParams}", f)))
-      }
+    _kafkaConsumer match {
+      case Some(kc) => kc
+      case None =>
+        statusUpdate(this, new StatusOK(s"Creating Kafka consumer with ${kafkaParams}"))
+        Try(
+          new KafkaConsumer[K, V](kafkaParams.asJava)
+        ) match {
+          case Success(kc) =>
+            _kafkaConsumer = Some(kc)
+            kc
+          case Failure(f) =>
+            statusUpdate(new StatusError(new Exception(s"Failed to create Kafka consumer: ${kafkaParams}", f)))
+            throw f
+        }
     }
-    _kafkaConsumer
   }
 
   override def close(): Unit = {
-
-    if(_kafkaConsumer != null) {
-      statusUpdate(this, new StatusOK(s"Closing kafka consumer in reader $this"))
-      _kafkaConsumer.close()
+    _kafkaConsumer match {
+      case Some(kc) => kc.close()
+      case None =>
+        statusUpdate(new StatusOK(s"Closing kafka consumer in reader $this"))
     }
   }
 
@@ -92,7 +97,7 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
           val endPosition = kafkaConsumer.position(tp)
           OffsetRange(
             tp, startingOffset,
-            Math.min(startingOffset + maxFetchedRecordsPerPartition, endPosition)
+            Math.min(startingOffset + maxRecordsPerPartition, endPosition)
           )
       }.filter(_.count() > 0).toSeq
 
@@ -109,16 +114,10 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
       fetchedOffsetRanges
       )
   }
-
-  /*override def flushDownstream(): Boolean = {
-    System.currentTimeMillis() - lastFlushTime >= flushInterval || fetchedRecords >= maxFetchedRecords
-  }*/
-
-
   /**
     * private internal mutable states
     */
-  private var _kafkaConsumer: KafkaConsumer[K, V] = null
+  private var _kafkaConsumer: Option[KafkaConsumer[K, V]] = None
 
   /**
     * Kafka reader can be configured to read topics with several approach
@@ -140,7 +139,7 @@ class KafkaSparkRDDReader[K, V](val kafkaParams: Map[String, Object])
     * @return whether the currently fetched/buffered data should be flushed down the stream
     */
   override def flush(lastFlushTime: Long, meta: Seq[OffsetRange]): Boolean = {
-    System.currentTimeMillis() - lastFlushTime >= flushInterval || inRecords(meta) >= maxFetchedRecordsPerPartition
+    System.currentTimeMillis() - lastFlushTime >= flushInterval || inRecords(meta) >= maxRecordsPerPartition
   }
 
   override def inRecords(meta: Seq[OffsetRange]): Long = {

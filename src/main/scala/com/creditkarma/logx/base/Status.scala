@@ -7,7 +7,7 @@ package com.creditkarma.logx.base
 trait Status {
   def statusCode: StatusCode.Value
   def message: String
-  override def toString = s"$statusCode($message)"
+  override def toString: String = s"$statusCode($message)"
 }
 
 class StatusOK (msg: String) extends Status {

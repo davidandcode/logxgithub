@@ -17,7 +17,7 @@ class KafkaCheckpoint(val offsetRanges: Seq[OffsetRange] = Seq.empty) extends Ch
     }.toMap
   }
 
-  override def toString = offsetRanges.mkString(", ")
+  override def toString: String = offsetRanges.mkString(", ")
 
   override def mergeDelta(delta: Seq[OffsetRange]): KafkaCheckpoint = {
     val offsetRangesMap = collection.mutable.Map.empty[TopicPartition, OffsetRange] ++

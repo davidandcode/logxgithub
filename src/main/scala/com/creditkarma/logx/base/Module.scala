@@ -10,7 +10,7 @@ trait Module extends Instrumentable {
     instrumentors.foreach(_.updateStatus(this, status))
   }
 
-  def metricUpdate(metrics: Map[MetricArgs.Value, Any]) = {
+  def metricUpdate(metrics: Map[MetricArgs.Value, Any]): Unit = {
     instrumentors.foreach(_.updateMetric(this, metrics))
   }
 }

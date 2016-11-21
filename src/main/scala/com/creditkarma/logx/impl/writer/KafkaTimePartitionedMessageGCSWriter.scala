@@ -10,7 +10,7 @@ import org.apache.spark.streaming.kafka010.OffsetRange
   * Created by yongjia.wang on 11/18/16.
   */
 class KafkaTimePartitionedMessageGCSWriter()
-  extends Writer [SparkRDD[KafkaTimePartitionedMessage], KafkaCheckpoint, Seq[OffsetRange]]{
+  extends Writer[SparkRDD[KafkaTimePartitionedMessage], KafkaCheckpoint, Seq[OffsetRange]]{
 
   //re-use gcs client object if possible
   /**

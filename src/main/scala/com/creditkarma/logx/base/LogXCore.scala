@@ -12,7 +12,7 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
   reader: Reader[I, C, Delta, _],
   transformer: Transformer[I, O],
   writer: Writer[O, Delta, _],
-  checkPointService: CheckpointService[C]
+  checkpointService: CheckpointService[C]
 ) extends Module {
 
   override def moduleType: ModuleType.Value = ModuleType.Core
@@ -21,24 +21,24 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
     reader.registerInstrumentor(instrumentor)
     transformer.registerInstrumentor(instrumentor)
     writer.registerInstrumentor(instrumentor)
-    checkPointService.registerInstrumentor(instrumentor)
+    checkpointService.registerInstrumentor(instrumentor)
   }
 
+  private val DefaultPollingInterval = 1000L
+
   var lastFlushTime: Long = 0
-  def runOneCycle() = {
-    instrumentors.foreach(_.cycleStarted)
+  def runOneCycle(): Unit = {
+    cycleStarted()
     /**
       * None of the module implementations should swallow exception
       */
     // 1. Load checkpoint
-    Try(checkPointService.executeLoad())
-    match {
+    Try(checkpointService.executeLoad()) match {
       // 1a. Load checkpoint success
       case Success(lastCheckpoint) =>
-        statusUpdate(checkPointService, new StatusOK(s"Got last checkpoint ${lastCheckpoint}"))
+        statusUpdate(checkpointService, new StatusOK(s"Got last checkpoint ${lastCheckpoint}"))
         // 2. Read
-        Try(reader.execute(lastFlushTime, lastCheckpoint))
-        match {
+        Try(reader.execute(lastFlushTime, lastCheckpoint)) match {
           // 2a. Read success
           case Success((inData, inDelta, flush)) =>
             // 2a-1. Flush
@@ -46,8 +46,7 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
               lastFlushTime = System.currentTimeMillis()
               statusUpdate(reader, new StatusOK("ready to flush"))
               // 3 transform
-              Try(transformer.execute(inData))
-              match {
+              Try(transformer.execute(inData)) match {
                 // 3a. Transform success
                 case Success(outData) =>
                   // 4. Write
@@ -57,17 +56,16 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
                       statusUpdate(writer, new StatusOK("ready to checkpoint"))
                       // 5. Checkpoint
                       Try(
-                        checkPointService.executeCommit(
+                        checkpointService.executeCommit(
                         lastCheckpoint
                           .mergeDelta(outDelta.getOrElse(inDelta)))
-                      )
-                      match {
+                      ) match {
                         // 5a. Checkpoint success
                         case Success(_) =>
-                          statusUpdate(checkPointService, new StatusOK("checkpoint success"))
+                          statusUpdate(checkpointService, new StatusOK("checkpoint success"))
                         // 5b. Checkpoint failure
                         case Failure(f) =>
-                          statusUpdate(checkPointService, new StatusError(f))
+                          statusUpdate(checkpointService, new StatusError(f))
                       }
                     // 4b. Write failure
                     case Failure(f)=>
@@ -89,12 +87,12 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
         }
       //1b. load checkpoint failure
       case Failure(f) =>
-        statusUpdate(checkPointService, new StatusError(f))
+        statusUpdate(checkpointService, new StatusError(f))
     }
-    instrumentors.foreach(_.cycleCompleted)
+    cycleCompleted()
   }
 
-  def start(pollingInterVal: Long = 1000): Unit = {
+  def start(pollingInterVal: Long = DefaultPollingInterval): Unit = {
 
     Try(reader.start())
     match {
@@ -118,7 +116,7 @@ class LogXCore[I <: BufferedData, O <: BufferedData, C <: Checkpoint[Delta, C], 
 
 
   def close(): Unit = {
-    instrumentors.foreach(_.updateStatus(this, new StatusOK("Shutting down")))
+    statusUpdate(new StatusOK("Shutting down"))
     reader.close()
     writer.close()
   }

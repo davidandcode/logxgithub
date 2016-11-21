@@ -9,14 +9,14 @@ import scala.collection.JavaConverters._
   */
 object LogInfoInstrumentor extends Instrumentor with LazyLog {
 
-  def printLogToConsole() = {
+  def printLogToConsole(): Unit = {
     val appenders = LogManager.getRootLogger.getAllAppenders.asScala
     if(!appenders.exists(_.isInstanceOf[ConsoleAppender])){ // if the appender is already at the root, which Spark does by default, don't add it
       val appender = new ConsoleAppender(new PatternLayout("%d{yy/MM/dd HH:mm:ss} %p %c{1}: %m%n"))
       logger.addAppender(appender)
     }
   }
-  def setLevel(level: Level) = {
+  def setLevel(level: Level): Unit = {
     logger.setLevel(level)
     this
   }

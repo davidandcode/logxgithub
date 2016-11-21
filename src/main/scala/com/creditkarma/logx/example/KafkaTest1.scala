@@ -140,12 +140,14 @@ object KafkaTest1 {
 
 
     val collectedData: ListBuffer[String] = ListBuffer.empty
+    val reader = new KafkaSparkRDDReader[String, String](kafkaParams)
+    reader.setMaxFetchRecordsPerPartition(1)
     val testLogX = new LogXCore(
       "test-logX",
-      new KafkaSparkRDDReader[String, String](kafkaParams).setMaxFetchRecordsPerPartition(1),
-      new IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]](),
-      new KafkaSparkRDDMessageCollector(collectedData),
-      new InMemoryKafkaCheckpointService()
+      reader = reader,
+      transformer = new IdentityTransformer[SparkRDD[ConsumerRecord[String, String]]](),
+      writer = new KafkaSparkRDDMessageCollector(collectedData),
+      checkpointService = new InMemoryKafkaCheckpointService()
     )
 
 
