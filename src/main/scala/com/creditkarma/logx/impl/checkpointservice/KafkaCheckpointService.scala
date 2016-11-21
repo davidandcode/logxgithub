@@ -31,9 +31,11 @@ class KafkaCheckpointService(kafkaParams:Map[String,Object],topic:String = null,
     val numOfTopicPartitions = topicPartitionOffsetMap.size
     val topicPartitionSet:Set[TopicPartition] = topicPartitionOffsetMap.keySet
 
-    if(numOfTopicPartitions <= 0){
-      throw new Exception("No toptic partions found with this KafkaCheckpoint");
-    }
+   // if(numOfTopicPartitions <= 0){
+     // throw new Exception("No toptic partions found with this KafkaCheckpoint");
+    //}
+
+    require(numOfTopicPartitions > 0)
 
     val offsetsToCommit:mutable.HashMap[TopicPartition, OffsetAndMetadata]= new mutable.HashMap[TopicPartition,OffsetAndMetadata]()
 
@@ -55,15 +57,13 @@ class KafkaCheckpointService(kafkaParams:Map[String,Object],topic:String = null,
     var newTopicPartitionSet:mutable.HashSet[TopicPartition] = new mutable.HashSet[TopicPartition]()
 
     // if nothing is committed last time, return null
-    if(topic == null || numPartition <=0) {
-      return null
-    }else {
+     require(topic != null && numPartition > 0)
 
       for(i <- 0 until numPartition){
         newTopicPartitionSet.+=(new TopicPartition(topic,i))
       }
 
-    }
+
 
 
     val mySeq:mutable.MutableList[OffsetRange] = new mutable.MutableList[OffsetRange]()
