@@ -10,7 +10,9 @@ import java.io.{BufferedReader, FileReader}
 import com.creditkarma.logx.base.{BufferedData, CheckpointService, Transformer, Writer, _}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.checkpointservice.KafkaCheckpointService
+import com.creditkarma.logx.impl.checkpointservice.ZookeeperCheckPointService
 import com.creditkarma.logx.impl.streambuffer.SparkRDD
+import com.creditkarma.logx.utils.gcs.{ZKCreate, ZookeeperCpUtils}
 import info.batey.kafka.unit.KafkaUnit
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer, OffsetAndMetadata}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
@@ -43,6 +45,7 @@ object Checkpointtests {
   }
 
   val (zkPort, kafkaPort) = (5556, 5558)
+  val shengweiport = 1818
 
   object TestKafkaServer {
 
@@ -200,12 +203,34 @@ object Checkpointtests {
         println("======================= the topic is " + offsetrange.topic + " and the partition is " + offsetrange.partition + " and the committed offset is " + offsetrange.untilOffset + " ================")
       }
 
+
+//val CRAP:Array[String] = new Array[String](2)
+  // ZKCreate.main(CRAP)
+
+      //ZookeeperCpUtils.create("shengwei",1712,"localhost")
+      //val myLong:Long = ZookeeperCpUtils.getData("shengwei","localhost")
+
+      //println("hello my long is " + myLong)
+
+      //val testZookeeperCheckpointService: ZookeeperCheckPointService= new ZookeeperCheckPointService("localhost:" + zkPort,"zkcp","testTopic",5)
+      //testZookeeperCheckpointService.commitCheckpoint(myCp)
+     // val zkCp = testZookeeperCheckpointService.lastCheckpoint()
+/*
+      for (offsetrange <- zkCp.offsetRanges) {
+        assert(888 == offsetrange.untilOffset)
+        println(" This is From ZooKeeper ! ======================= the topic is " + offsetrange.topic + " and the partition is " + offsetrange.partition + " and the committed offset is " + offsetrange.untilOffset + " ================")
+      }
+
+*/
+
+
+      println("check point testing good now")
     } catch{
-      case e: Exception => e.printStackTrace
+      case e: Exception => {e.printStackTrace; println("exception is caught")}
     } finally{
       TestKafkaServer.stop()
 
-      println("check point testing good now")
+
     }
 
   }

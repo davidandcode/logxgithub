@@ -16,30 +16,27 @@ import java.util.List;
 public class ZookeeperCpUtils {
 
 
-
-
-
-
     // shut down zk first and conn then
     // (start a conn and then start zk)
 
 
-    public static void create(String path, byte[] data,String hostport) throws
+    public static void create(String path, long mydata,String hostport) throws
             KeeperException,InterruptedException {
 
+        byte[] data = ByteUtils.longToBytes(mydata);
         ZooKeeperConnection conn = new ZooKeeperConnection();
         ZooKeeper zk = null;
         try {
 
             zk = conn.connect(hostport);
             zk.create(path, data, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
-            zk.close();
+
         } catch (Exception e){
 
+        }finally {
+            zk.close();
+            conn.close();
         }
-
-        conn.close();
-
     }
 
 
@@ -51,13 +48,15 @@ public class ZookeeperCpUtils {
 
             zk = conn.connect(hostport);
             zk.delete(path,zk.exists(path,true).getVersion());
-            zk.close();
+
         } catch (Exception e){
 
         }
+        finally {
 
-        conn.close();
-
+            zk.close();
+            conn.close();
+        }
     }
 
 
@@ -71,14 +70,17 @@ public class ZookeeperCpUtils {
 
             zk = conn.connect(hostport);
             result= zk.exists(path, true) == null?false:true;
-            zk.close();
+
         } catch (Exception e){
 
         }
+finally {
+            zk.close();
+            conn.close();
 
-        conn.close();
+
+        }
         return result;
-
     }
 
     public static List<String> getChildren(String path,String hostport) throws
@@ -93,20 +95,23 @@ public class ZookeeperCpUtils {
             zk = conn.connect(hostport);
             if(znodeExists(path,hostport))
                 result = zk.getChildren(path,false);
-            zk.close();
+
         } catch (Exception e){
 
-        }
+        }finally {
 
-        conn.close();
+
+            zk.close();
+            conn.close();
+        }
         return result;
 
     }
 
 
-    public static byte[] getData(String path,String hostport) throws Exception {
+    public static long getData(String path,String hostport) throws Exception {
         byte[] result = null;
-
+        long resultFinal = -1;
         ZooKeeperConnection conn = new ZooKeeperConnection();
         ZooKeeper zk = null;
         try {
@@ -114,33 +119,40 @@ public class ZookeeperCpUtils {
             zk = conn.connect(hostport);
             if(znodeExists(path,hostport))
                 result = zk.getData(path,false,null);
-            zk.close();
+
+            resultFinal = ByteUtils.bytesToLong(result);
+
         } catch (Exception e){
 
-        }
+        }finally {
 
-        conn.close();
-        return result;
+
+            zk.close();
+            conn.close();
+        }return resultFinal;
 
 
     }
 
-    public static void update(String path, byte[] data,String hostport) throws
+    public static void update(String path, long mydata,String hostport) throws
             KeeperException,InterruptedException {
 
+        byte[] data = ByteUtils.longToBytes(mydata);
         ZooKeeperConnection conn = new ZooKeeperConnection();
         ZooKeeper zk = null;
         try {
 
             zk = conn.connect(hostport);
             zk.setData(path, data, zk.exists(path,true).getVersion());
-            zk.close();
+
         } catch (Exception e){
 
+        }finally {
+
+
+            zk.close();
+            conn.close();
         }
-
-        conn.close();
-
 
     }
 

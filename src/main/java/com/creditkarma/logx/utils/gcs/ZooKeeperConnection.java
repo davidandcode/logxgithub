@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 
+import info.batey.kafka.unit.Zookeeper;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
@@ -23,6 +24,7 @@ public class ZooKeeperConnection {
     // Method to connect zookeeper ensemble.
     public ZooKeeper connect(String host) throws IOException,InterruptedException {
 
+
         zoo = new ZooKeeper(host,5000,new Watcher() {
 
             public void process(WatchedEvent we) {
@@ -32,6 +34,8 @@ public class ZooKeeperConnection {
                 }
             }
         });
+
+
 
         connectedSignal.await();
         return zoo;

@@ -2,7 +2,7 @@ package com.creditkarma.logx.impl.checkpointservice
 
 import com.creditkarma.logx.base.{Checkpoint, CheckpointService}
 import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
-import com.creditkarma.logx.utils.gcs.ZookeeperCpUtils
+import com.creditkarma.logx.utils.gcs.{ByteUtils, ZookeeperCpUtils}
 import org.apache.kafka.clients.consumer.OffsetAndMetadata
 import org.apache.kafka.common.TopicPartition
 import org.apache.spark.streaming.kafka010.OffsetRange
@@ -13,7 +13,7 @@ import scala.collection.mutable
 /**
   * Created by shengwei.wang on 11/19/16.
   */
-class ZookeeperCheckPointServiceextends(hostport:String,path:String,topic:String = null,numPartition:Int = 0) extends  CheckpointService[KafkaCheckpoint] {
+class ZookeeperCheckPointService(hostport:String,path:String,topic:String = null,numPartition:Int = 0) extends  CheckpointService[KafkaCheckpoint] {
 
 
 
@@ -42,11 +42,18 @@ class ZookeeperCheckPointServiceextends(hostport:String,path:String,topic:String
     for(tp <- offsetsToCommit.keySet){
     val tempPathString:String = "/" + path + "/" + tp.topic() + "/" + tp.partition()
 
+       if(ZookeeperCpUtils.znodeExists(tempPathString,hostport)){
+         ZookeeperCpUtils.create(tempPathString,offsetsToCommit(tp).offset(),hostport)
+       }else{
+         ZookeeperCpUtils.update(tempPathString,offsetsToCommit(tp).offset(),hostport)
+       }
+
+      println("saved one")
 
     }
 
 
-   // kc.commitSync(offsetsToCommit)
+
 
 
 
@@ -54,34 +61,29 @@ class ZookeeperCheckPointServiceextends(hostport:String,path:String,topic:String
 
   override def lastCheckpoint(): KafkaCheckpoint = {
 
-    var newTopicPartitionSet:mutable.HashSet[TopicPartition] = new mutable.HashSet[TopicPartition]()
+    var newTopicPartitionSet:mutable.HashSet[String] = new mutable.HashSet[String]()
+    val mySeq:mutable.MutableList[OffsetRange] = new mutable.MutableList[OffsetRange]()
 
     // if nothing is committed last time, return null
     require(topic != null && numPartition > 0 && path != null)
 
 
-      for(i <- 0 until numPartition){
-        newTopicPartitionSet.+=(new TopicPartition(topic,i))
+      for(i <- 0 until numPartition) {
+
+        val number:Long = ZookeeperCpUtils.getData("/" + path + "/" + topic + "/" + i,hostport)
+
+
+        // fromOffset is set to be 0
+        val tempOffsetRange:OffsetRange = OffsetRange.create(topic,i,0,number)
+        mySeq.+=(tempOffsetRange)
+
       }
 
 
 
 
-    val mySeq:mutable.MutableList[OffsetRange] = new mutable.MutableList[OffsetRange]()
-
-    for(tp <- newTopicPartitionSet){
-
-      //val tempOffset:Long = kc.committed(tp).offset
-
-      val zk:ZooKeeper = ZookeeperCpUtils.getAZookeeper(path)
-      val ckArray:Array[Byte] =ZookeeperCpUtils.getData(path,zk)
 
 
-      // fromOffset is set to be 0
-    //  val tempOffsetRange:OffsetRange = OffsetRange.create(tp,0,tempOffset)
-     // mySeq.+=(tempOffsetRange)
-
-    }
 
     new KafkaCheckpoint(mySeq)
 
