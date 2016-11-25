@@ -37,7 +37,7 @@ object ZKCheckpointtests {
 
 
       // fromOffset is set to be 0
-      val tempOffsetRange: OffsetRange = OffsetRange.create(tp, 0, 2017)
+      val tempOffsetRange: OffsetRange = OffsetRange.create(tp, 0, 1357924680)
       mySeq.+=(tempOffsetRange)
 
     }
@@ -51,7 +51,7 @@ object ZKCheckpointtests {
     val lastCp = myZookeeperCheckPointService.lastCheckpoint()
 
     for (offsetrange <- lastCp.offsetRanges) {
-      //assert(999 == offsetrange.untilOffset)
+      assert(1357924680 == offsetrange.untilOffset)
       println("======================= the topic is " + offsetrange.topic + " and the partition is " + offsetrange.partition + " and the committed offset is " + offsetrange.untilOffset + " ================")
     }
 
