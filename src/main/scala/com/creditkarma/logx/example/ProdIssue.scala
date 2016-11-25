@@ -5,7 +5,7 @@ package com.creditkarma.logx.example
   */
 import java.io.{ByteArrayInputStream, SequenceInputStream}
 
-import com.creditkarma.logx.utils.gcs.{GCSUtils, WriteUtil}
+import com.creditkarma.logx.utils.gcs.{GCSUtils}
 import com.google.api.client.http.InputStreamContent
 import com.google.api.services.storage.model.StorageObject
 import org.apache.spark.SparkConf
@@ -36,7 +36,7 @@ import com.google.api.client.http.InputStreamContent
 import java.io._;
 
 
-object SparkForProd {
+object ProdIssue {
 
   def main(args: Array[String]) {
 
@@ -116,9 +116,6 @@ if(tempString.contains("loanRate")) {
 
 
 
-
-
-
         val storage = GCSUtils.getService("/Users/shengwei.wang/projects/DataScience-f7d364638ad4.json", 10000, 10000)
 
         val request = storage.objects.insert(
@@ -129,21 +126,6 @@ if(tempString.contains("loanRate")) {
         )
         request.getMediaHttpUploader.setDirectUploadEnabled(true)
         request.execute()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

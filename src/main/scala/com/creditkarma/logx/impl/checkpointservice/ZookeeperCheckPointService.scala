@@ -24,10 +24,6 @@ class ZookeeperCheckPointService(hostport:String,path:String,topic:String = null
     val numOfTopicPartitions = topicPartitionOffsetMap.size
     val topicPartitionSet:Set[TopicPartition] = topicPartitionOffsetMap.keySet
 
-    // if(numOfTopicPartitions <= 0){
-    // throw new Exception("No toptic partions found with this KafkaCheckpoint");
-    //}
-
     require(numOfTopicPartitions > 0)
 
     val offsetsToCommit:mutable.HashMap[TopicPartition, OffsetAndMetadata]= new mutable.HashMap[TopicPartition,OffsetAndMetadata]()
@@ -40,15 +36,15 @@ class ZookeeperCheckPointService(hostport:String,path:String,topic:String = null
 
 
     for(tp <- offsetsToCommit.keySet){
-    val tempPathString:String = "/" + path + "/" + tp.topic() + "/" + tp.partition()
 
-       if(ZookeeperCpUtils.znodeExists(tempPathString,hostport)){
+   val tempPathString:String = "/" + path + tp.topic() +  tp.partition()
+
+
+       if(!ZookeeperCpUtils.znodeExists(tempPathString,hostport)){
          ZookeeperCpUtils.create(tempPathString,offsetsToCommit(tp).offset(),hostport)
        }else{
          ZookeeperCpUtils.update(tempPathString,offsetsToCommit(tp).offset(),hostport)
        }
-
-      println("saved one")
 
     }
 
@@ -70,8 +66,8 @@ class ZookeeperCheckPointService(hostport:String,path:String,topic:String = null
 
       for(i <- 0 until numPartition) {
 
-        val number:Long = ZookeeperCpUtils.getData("/" + path + "/" + topic + "/" + i,hostport)
-
+        //val number:Long = ZookeeperCpUtils.getData("/" + path + "/" + topic + "/" + i,hostport)
+        val number:Long = ZookeeperCpUtils.getData("/" + path + topic + i,hostport)
 
         // fromOffset is set to be 0
         val tempOffsetRange:OffsetRange = OffsetRange.create(topic,i,0,number)

@@ -12,12 +12,12 @@ import java.util.List;
 
 /**
  * Created by shengwei.wang on 11/19/16.
+ *
+ * Get zookeeper ensemble up and running
+ *
+ * Use the corrrect port number or just the hostname only
  */
 public class ZookeeperCpUtils {
-
-
-    // shut down zk first and conn then
-    // (start a conn and then start zk)
 
 
     public static void create(String path, long mydata,String hostport) throws
@@ -29,9 +29,15 @@ public class ZookeeperCpUtils {
         try {
 
             zk = conn.connect(hostport);
+
+            // try to create existing node will give you the exception
+            // may need to change the CreateMode type to persistent + sequential for the same topic and partition
             zk.create(path, data, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 
         } catch (Exception e){
+
+            // this is for testing purpose, need to use log4j
+            System.out.println(e.toString());
 
         }finally {
             zk.close();
@@ -46,11 +52,14 @@ public class ZookeeperCpUtils {
         ZooKeeper zk = null;
         try {
 
+
+            // try to delete a node which doesn't exist will give you an exception
             zk = conn.connect(hostport);
             zk.delete(path,zk.exists(path,true).getVersion());
 
         } catch (Exception e){
 
+            System.out.println(e.toString());
         }
         finally {
 
@@ -120,16 +129,23 @@ finally {
             if(znodeExists(path,hostport))
                 result = zk.getData(path,false,null);
 
-            resultFinal = ByteUtils.bytesToLong(result);
+
 
         } catch (Exception e){
+
+            System.out.println("here: " + e.toString());
 
         }finally {
 
 
-            zk.close();
-            conn.close();
-        }return resultFinal;
+
+
+                zk.close();
+                 conn.close();
+        }
+
+        resultFinal = ByteUtils.bytesToLong(result);
+        return resultFinal;
 
 
     }
@@ -145,6 +161,8 @@ finally {
             zk = conn.connect(hostport);
             zk.setData(path, data, zk.exists(path,true).getVersion());
 
+
+
         } catch (Exception e){
 
         }finally {
@@ -155,6 +173,19 @@ finally {
         }
 
     }
+
+/*
+    public static void main(String[] args) throws Exception{
+        //create("/ThursdayMorning",13579,"localhost");
+        //Long myData = getData("/ThursdayMorning","localhost");
+        //System.out.println(myData);
+
+        update("/ThursdayMorning",1357,"localhost:2181");
+
+        Long myData = getData("/ThursdayMorning","localhost:2181");
+        System.out.println(myData);
+    }
+*/
 
 
 }

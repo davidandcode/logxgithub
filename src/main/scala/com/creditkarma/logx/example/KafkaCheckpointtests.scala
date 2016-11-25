@@ -12,7 +12,6 @@ import com.creditkarma.logx.impl.checkpoint.KafkaCheckpoint
 import com.creditkarma.logx.impl.checkpointservice.KafkaCheckpointService
 import com.creditkarma.logx.impl.checkpointservice.ZookeeperCheckPointService
 import com.creditkarma.logx.impl.streambuffer.SparkRDD
-import com.creditkarma.logx.utils.gcs.{ZKCreate, ZookeeperCpUtils}
 import info.batey.kafka.unit.KafkaUnit
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer, OffsetAndMetadata}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
@@ -30,7 +29,7 @@ import scala.collection.JavaConversions._
 /**
   * Created by shengwei.wang on 11/17/16.
   */
-object Checkpointtests {
+object KafkaCheckpointtests {
 
 
   class InMemoryKafkaCheckpointService extends CheckpointService[KafkaCheckpoint]{

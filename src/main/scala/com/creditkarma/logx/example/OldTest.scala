@@ -12,7 +12,6 @@ import com.creditkarma.logx.impl.checkpointservice.KafkaCheckpointService
 import com.creditkarma.logx.impl.streambuffer.SparkRDD
 import com.creditkarma.logx.impl.streamreader.KafkaSparkRDDReader
 import com.creditkarma.logx.instrumentation.LogInfoInstrumentor
-import com.creditkarma.logx.utils.gcs.{ZKCreate, ZooKeeperConnection}
 import info.batey.kafka.unit.KafkaUnit
 import org.apache.kafka.clients.consumer.{ConsumerRecord, KafkaConsumer, OffsetAndMetadata}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
@@ -38,16 +37,12 @@ object OldTest {
   }
 
 
-
-
-
-
   val (zkPort, kafkaPort) = (5556, 5558)
 
   object TestKafkaServer {
 
     val kafkaUnitServer = new KafkaUnit(zkPort, kafkaPort)
-    val kp = new KafkaProducer[String, String](kafkaParams.asJava)
+    val kp = new KafkaProducer[String, String](kafkaParams)
 
     def start(): Unit = {
       kafkaUnitServer.startup()
@@ -58,18 +53,16 @@ object OldTest {
     var dataSentToKafka = 0
 
     def loadData (dataFile: String): Unit = {
+
       val br = new BufferedReader(new FileReader(dataFile))
       while({
         val line = br.readLine()
-        if(line != null){
-          testData.append(line)
-          true
-        }
-        else{
-          false
-        }
+        kp.send(new ProducerRecord[String, String]("testTopic", null, line))
+        kp.flush()
+        line != null
       }){
       }
+
     }
 
     def sendNextMessage(n: Int): Unit = {
@@ -126,8 +119,8 @@ object OldTest {
 
 
 
-      //val conn: ZooKeeperConnection = new ZooKeeperConnection();
-      //val zk:ZooKeeper = conn.connect("localhost:" + 5556);
+     // val conn: ZooKeeperConnection = new ZooKeeperConnection();
+     // val zk:ZooKeeper = conn.connect("localhost:" + zkPort);
 
 
 
@@ -139,19 +132,4 @@ object OldTest {
 
   }
 
-  def loadDataToLocalKafka(kafkaUnitServer: KafkaUnit) = {
-    kafkaUnitServer.startup()
-
-    val kp = new KafkaProducer[String, String](kafkaParams.asJava)
-    val br = new BufferedReader(new FileReader("test_data/KRSOffer.json"))
-    while({
-      val line = br.readLine()
-      kp.send(new ProducerRecord[String, String]("testTopic", null, line))
-      kp.flush()
-      line != null
-    }){
-    }
-
-    kp.close()
-  }
 }

@@ -4,16 +4,19 @@ package com.creditkarma.logx.utils.gcs;
  * Created by shengwei.wang on 11/19/16.
  */
 
+// import java classes
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
-
-import info.batey.kafka.unit.Zookeeper;
+// import zookeeper classes
+import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooKeeper;
-
+import org.apache.zookeeper.AsyncCallback.StatCallback;
+import org.apache.zookeeper.KeeperException.Code;
+import org.apache.zookeeper.data.Stat;
 
 public class ZooKeeperConnection {
 
@@ -24,8 +27,7 @@ public class ZooKeeperConnection {
     // Method to connect zookeeper ensemble.
     public ZooKeeper connect(String host) throws IOException,InterruptedException {
 
-
-        zoo = new ZooKeeper(host,5000,new Watcher() {
+        zoo = new ZooKeeper(host,10000,new Watcher() {
 
             public void process(WatchedEvent we) {
 
@@ -34,8 +36,6 @@ public class ZooKeeperConnection {
                 }
             }
         });
-
-
 
         connectedSignal.await();
         return zoo;
