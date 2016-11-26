@@ -183,7 +183,7 @@ object KafkaCheckpointtests {
 
 
         // fromOffset is set to be 0
-        val tempOffsetRange: OffsetRange = OffsetRange.create(tp, 0, 888)
+        val tempOffsetRange: OffsetRange = OffsetRange.create(tp, 0, 1234567890)
         mySeq.+=(tempOffsetRange)
 
       }
@@ -198,7 +198,7 @@ object KafkaCheckpointtests {
       val lastCp = testKafkaCheckpointService.lastCheckpoint()
 
       for (offsetrange <- lastCp.offsetRanges) {
-        assert(888 == offsetrange.untilOffset)
+        assert(1234567890 == offsetrange.untilOffset)
         println("======================= the topic is " + offsetrange.topic + " and the partition is " + offsetrange.partition + " and the committed offset is " + offsetrange.untilOffset + " ================")
       }
 

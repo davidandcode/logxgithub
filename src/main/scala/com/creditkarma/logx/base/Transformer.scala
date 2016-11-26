@@ -5,17 +5,36 @@ import scala.util.{Failure, Success, Try}
 /**
   * Created by yongjia.wang on 11/16/16.
   */
-trait Transformer[I <: BufferedData, O <: BufferedData] extends Module {
+trait Transformer[I <: BufferedData, O <: BufferedData, Meta] extends Module {
 
   // right now, transform seems only need to be measured by elapsed time, no other metrics in mind yet
-  def transform(input: I): O
+  def transform(input: I): (O,Meta)
 
-  final def execute(input: I): O = {
+
+  def inBytes(meta: Meta): Long
+  def inRecords(meta: Meta): Long
+  def outBytes(meta: Meta): Long
+  def outRecords(meta: Meta): Long
+
+  final def execute(input: I): (O,Meta) = {
     Try(transform(input))
     match {
-      case Success(out) => out
+      case Success((out,meta)) => {
+
+
+        metricUpdate(
+          Map(
+            MetricArgs.InRecords->inRecords(meta),
+            MetricArgs.InBytes->inBytes(meta),
+            MetricArgs.InRecords->outRecords(meta),
+            MetricArgs.InBytes->outBytes(meta)
+          )
+        )
+
+        (out,meta)
         // TODO instrumentation
 
+      }
       case Failure(f) => throw f
     }
   }

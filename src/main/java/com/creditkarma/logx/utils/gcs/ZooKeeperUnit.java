@@ -10,9 +10,7 @@ public class ZooKeeperUnit {
 
         private Zookeeper zookeeper;
 
-
-
-        public void startService(int port) {
+    public void startService(int port) {
 
 
         zookeeper =new Zookeeper(port);
@@ -20,8 +18,9 @@ public class ZooKeeperUnit {
 }
 
 
- public void shutDownService(){
-         if (zookeeper != null) zookeeper.shutdown();
+    public void shutDownService(){
+
+        if (zookeeper != null) zookeeper.shutdown();
  }
 
 }

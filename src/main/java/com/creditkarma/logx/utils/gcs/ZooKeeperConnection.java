@@ -4,19 +4,15 @@ package com.creditkarma.logx.utils.gcs;
  * Created by shengwei.wang on 11/19/16.
  */
 
-// import java classes
+
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
-// import zookeeper classes
-import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooKeeper;
-import org.apache.zookeeper.AsyncCallback.StatCallback;
-import org.apache.zookeeper.KeeperException.Code;
-import org.apache.zookeeper.data.Stat;
+
 
 public class ZooKeeperConnection {
 
