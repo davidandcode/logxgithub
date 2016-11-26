@@ -4,6 +4,12 @@ import scala.util.{Failure, Success, Try}
 
 /**
   * Created by yongjia.wang on 11/16/16.
+  *
+  */
+
+
+/**
+  * @tparam Meta meta data of the transformation, used to construct checkpoint delta and metrics
   */
 trait Transformer[I <: BufferedData, O <: BufferedData, Meta] extends Module {
 
