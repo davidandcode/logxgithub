@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3fefb42-5a3c-44c3-96ca-25d7dfadbf4c" name="Default" comment="" />
+    <list default="true" id="b3fefb42-5a3c-44c3-96ca-25d7dfadbf4c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala" />
+    </list>
     <ignored path="logx.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,6 +27,10 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -32,13 +42,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KafkaSparkStringRDDTimePartitionTransformer.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala">
+      <file leaf-file-name="ZKCheckpointtests.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ZKCheckpointtests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="513">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding>
-                <element signature="e#47#103#0" expanded="true" />
+                <element signature="e#38#97#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,7 +89,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKCreate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/a.java" />
         <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/Checkpointtests.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ProdIssue.scala" />
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ByteUtils.java" />
         <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/ZookeeperCheckPointService.scala" />
@@ -88,8 +97,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZookeeperCpUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperUnit.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/LogXCore.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala" />
       </list>
     </option>
   </component>
@@ -129,31 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scratches" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Tests" />
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,39 +282,9 @@
               <option name="myItemId" value="transformer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="streamreader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="KafkaSparkStringRDDTimePartitionTransformer.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -437,16 +394,33 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gcs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Scratches" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Tests" />
       </pane>
     </panes>
   </component>
@@ -1094,6 +1068,7 @@
       <workItem from="1479833110599" duration="37036000" />
       <workItem from="1480044410488" duration="19875000" />
       <workItem from="1480194910471" duration="8000" />
+      <workItem from="1480217804394" duration="4421000" />
     </task>
     <task id="LOCAL-00001" summary="updated testing case">
       <created>1479766211716</created>
@@ -1162,7 +1137,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76561000" />
+    <option name="totallyTimeSpent" value="80982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -1170,6 +1145,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1177,11 +1153,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5675341" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26746988" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1189,14 +1166,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38795182" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38795182" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26746988" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1357,32 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <marker date="1480036507000" expanded="true" signature="38:88" ph="/**...*/" />
-            <marker date="1480036507000" expanded="true" signature="97:1224" ph="..." />
-            <marker date="1480036507000" expanded="true" signature="1226:1275" ph="/**...*/" />
-            <marker date="1480036507000" expanded="true" signature="1366:1419" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="1489:2667" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="1636:1725" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="1856:2107" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2149:2236" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2275:2509" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2319:2342" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2354:2503" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2606:2663" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="2708:3006" ph="(...)" />
-            <marker date="1480036507000" expanded="true" signature="3048:3852" ph="{...}" />
-            <marker date="1480036507000" expanded="true" signature="3301:3602" ph="(...)" />
-            <marker date="1480036507000" expanded="true" signature="3414:3594" ph="..." />
-            <marker date="1480036507000" expanded="true" signature="3611:3736" ph="/.../" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ProdIssue.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1338">
@@ -1429,40 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="380" column="0" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="45:904" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="906:955" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="975:5775" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1050:1103" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1271:1754" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1361:1496" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1837:2086" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1966:1999" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2054:2082" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2155:3344" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2309:2398" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2529:2784" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2662:2720" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2733:2760" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2826:2913" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2952:3186" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="2996:3019" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3031:3180" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3283:3340" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3385:3683" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="3725:5352" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3966:4259" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="4075:4253" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="4470:4736" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="5411:5773" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1569,72 +1484,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Status.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="99:218" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="264:346" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="403:528" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="568:595" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaCheckpointtests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2214">
-          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
-          <folding>
-            <marker date="1480051253000" expanded="true" signature="38:88" ph="/**...*/" />
-            <marker date="1480051253000" expanded="true" signature="98:1135" ph="..." />
-            <marker date="1480051253000" expanded="true" signature="1137:1187" ph="/**...*/" />
-            <marker date="1480051253000" expanded="true" signature="1216:8048" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="1301:1550" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="1430:1463" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="1518:1546" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="1645:2916" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="1799:1888" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2019:2356" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2398:2485" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2524:2758" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2568:2591" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2603:2752" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2855:2912" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="2957:3255" ph="(...)" />
-            <marker date="1480051253000" expanded="true" signature="3297:8044" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="3542:3843" ph="(...)" />
-            <marker date="1480051253000" expanded="true" signature="3655:3835" ph="..." />
-            <marker date="1480051253000" expanded="true" signature="3853:4260" ph="/.../" />
-            <marker date="1480051253000" expanded="true" signature="4734:4992" ph="(...)" />
-            <marker date="1480051253000" expanded="true" signature="5316:5595" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="5604:5715" ph="/.../" />
-            <marker date="1480051253000" expanded="true" signature="6258:6422" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="6693:6966" ph="{...}" />
-            <marker date="1480051253000" expanded="true" signature="6969:7502" ph="/.../" />
-            <marker date="1480051253000" expanded="true" signature="7503:7847" ph="/.../" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/utils/LazyLog.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Checkpoint.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="35:120" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="164:337" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="168:305" ph="/**...*/" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1657,50 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/LogXCore.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="78:127" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="399:4158" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="536:786" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="892:3479" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="917:997" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="1071:3454" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1156:3327" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="1328:3327" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1451:3206" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="1462:2981" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1670:2967" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1802:2811" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="1837:2811" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1948:2649" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="2070:2259" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="2127:2235" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="2266:2649" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3030:3206" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3549:4040" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3586:4035" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3621:3944" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="3655:3944" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="3699:3845" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="4065:4156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/MetricArgs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="122:200" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Instrumentor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1708,21 +1517,6 @@
           <folding>
             <marker date="1479762114000" expanded="true" signature="35:626" ph="/**...*/" />
             <marker date="1479762114000" expanded="true" signature="646:877" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ZKCheckpointtests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <marker date="1480049215000" expanded="true" signature="45:361" ph="..." />
-            <marker date="1480049215000" expanded="true" signature="364:414" ph="/**...*/" />
-            <marker date="1480049215000" expanded="true" signature="443:1927" ph="{...}" />
-            <marker date="1480049215000" expanded="true" signature="485:1924" ph="{...}" />
-            <marker date="1480049215000" expanded="true" signature="1116:1272" ph="{...}" />
-            <marker date="1480049215000" expanded="true" signature="1615:1882" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1745,19 +1539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/writer/KafkaTimePartitionedMessageGCSWriter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <marker date="1479762114000" expanded="false" signature="49:324" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="326:375" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="511:1086" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="557:748" ph="/**...*/" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1787,17 +1568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/BufferedData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="35:555" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="575:579" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/instrumentation/LogInfoInstrumentor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
@@ -1817,6 +1587,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/BufferedData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:555" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="575:579" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Checkpoint.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:120" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="164:337" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="168:305" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/LogXCore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:127" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1828:4158" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="548:798" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1828:3479" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="929:1009" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1828:3454" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1828:3327" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1828:3327" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1828:3206" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1828:2981" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1828:2967" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1828:2811" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1837:2811" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1948:2649" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="2070:2259" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2127:2235" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2266:2649" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3030:3206" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3549:4040" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3586:4035" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3621:3944" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="3655:3944" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3699:3845" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="4065:4156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/MetricArgs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="122:200" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Module.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1831,63 +1668,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Writer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Status.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding>
-            <marker date="1479762114000" expanded="true" signature="78:349" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="410:1558" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="464:655" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="820:1008" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="1105:1491" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1138:1487" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1176:1448" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="1188:1425" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="1203:1415" ph="(...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Reader.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <marker date="1479762114000" expanded="true" signature="78:183" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="263:1887" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="383:1046" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="1113:1303" ph="/**...*/" />
-            <marker date="1479762114000" expanded="true" signature="1532:1885" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1590:1881" ph="{...}" />
-            <marker date="1479762114000" expanded="true" signature="1636:1842" ph="..." />
-            <marker date="1479762114000" expanded="true" signature="1648:1783" ph="(...)" />
-            <marker date="1479762114000" expanded="true" signature="1663:1773" ph="(...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <marker date="1480133478000" expanded="true" signature="78:131" ph="/**...*/" />
-            <marker date="1480133478000" expanded="true" signature="134:239" ph="/**...*/" />
-            <marker date="1480133478000" expanded="true" signature="317:1146" ph="{...}" />
-            <marker date="1480133478000" expanded="true" signature="638:1075" ph="{...}" />
-            <marker date="1480133478000" expanded="true" signature="676:1071" ph="{...}" />
-            <marker date="1480133478000" expanded="true" signature="712:1032" ph="..." />
-            <marker date="1480133478000" expanded="true" signature="736:971" ph="(...)" />
-            <marker date="1480133478000" expanded="true" signature="751:961" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="99:218" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="264:346" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="403:528" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="568:595" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/streamreader/KafkaSparkRDDReader.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="101" selection-end-column="35" />
+        <state relative-caret-position="1350">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
           <folding>
             <marker date="1479762114000" expanded="false" signature="55:600" ph="..." />
             <marker date="1479762114000" expanded="true" signature="602:651" ph="/**...*/" />
@@ -1927,12 +1725,198 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaCheckpointtests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3210">
+          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding>
+            <marker date="1480051253000" expanded="true" signature="38:88" ph="/**...*/" />
+            <marker date="1480051253000" expanded="true" signature="98:1135" ph="..." />
+            <marker date="1480051253000" expanded="true" signature="1137:1187" ph="/**...*/" />
+            <marker date="1480051253000" expanded="true" signature="1216:8048" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1301:1550" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1430:1463" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1518:1546" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1645:2916" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1799:1888" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2019:2356" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2398:2485" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2524:2758" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2568:2591" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2603:2752" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2855:2912" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2957:3255" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="3297:8044" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="3542:3843" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="3655:3835" ph="..." />
+            <marker date="1480051253000" expanded="true" signature="3853:4260" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="4734:4992" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="5316:5595" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="5604:5715" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="6258:6422" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="6693:6966" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="6969:7502" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="7503:7847" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/writer/KafkaTimePartitionedMessageGCSWriter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="false" signature="49:324" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="326:375" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="511:1086" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="557:748" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Writer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:349" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="410:1558" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="464:655" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="820:1008" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1105:1491" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1138:1487" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1176:1448" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1188:1425" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1203:1415" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Reader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:183" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="263:1887" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="383:1046" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1113:1303" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1532:1885" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1590:1881" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1636:1842" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1648:1783" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1663:1773" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
-            <element signature="e#47#103#0" expanded="true" />
+            <marker date="1480225562000" expanded="true" signature="54:80" ph="..." />
+            <marker date="1480225562000" expanded="false" signature="54:248" ph="..." />
+            <marker date="1480225562000" expanded="true" signature="250:299" ph="/**...*/" />
+            <marker date="1480225562000" expanded="true" signature="438:481" ph="{...}" />
+            <marker date="1480225562000" expanded="true" signature="508:559" ph="{...}" />
+            <marker date="1480225562000" expanded="true" signature="802:1524" ph="{...}" />
+            <marker date="1480225562000" expanded="true" signature="919:1300" ph="{...}" />
+            <marker date="1480225562000" expanded="true" signature="937:1296" ph="(...)" />
+            <marker date="1480225562000" expanded="true" signature="977:1290" ph="(...)" />
+            <marker date="1480225562000" expanded="true" signature="1039:1282" ph="..." />
+            <marker date="1480225562000" expanded="true" signature="1058:1282" ph="(...)" />
+            <marker date="1480225562000" expanded="true" signature="1384:1411" ph="{...}" />
+            <marker date="1480225562000" expanded="true" signature="1494:1522" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <marker date="1480225517000" expanded="true" signature="78:127" ph="/**...*/" />
+            <marker date="1480225517000" expanded="true" signature="199:833" ph="{...}" />
+            <marker date="1480225517000" expanded="true" signature="433:762" ph="{...}" />
+            <marker date="1480225517000" expanded="true" signature="471:758" ph="{...}" />
+            <marker date="1480225517000" expanded="true" signature="500:719" ph="..." />
+            <marker date="1480225517000" expanded="true" signature="523:664" ph="(...)" />
+            <marker date="1480225517000" expanded="true" signature="538:654" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding>
+            <marker date="1480225638000" expanded="true" signature="45:893" ph="..." />
+            <marker date="1480225638000" expanded="false" signature="45:904" ph="..." />
+            <marker date="1480225638000" expanded="true" signature="906:955" ph="/**...*/" />
+            <marker date="1480225638000" expanded="true" signature="975:5877" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="1050:1205" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="1373:1856" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="1463:1598" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="1939:2188" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2068:2101" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2156:2184" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2257:3446" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2411:2500" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2631:2886" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2764:2822" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2835:2862" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="2928:3015" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="3054:3288" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="3098:3121" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="3133:3282" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="3385:3442" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="3487:3785" ph="(...)" />
+            <marker date="1480225638000" expanded="true" signature="3827:5454" ph="{...}" />
+            <marker date="1480225638000" expanded="true" signature="4068:4361" ph="(...)" />
+            <marker date="1480225638000" expanded="true" signature="4177:4355" ph="..." />
+            <marker date="1480225638000" expanded="true" signature="4572:4838" ph="(...)" />
+            <marker date="1480225638000" expanded="true" signature="5513:5875" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <marker date="1480225660000" expanded="true" signature="38:88" ph="/**...*/" />
+            <marker date="1480225660000" expanded="true" signature="97:1224" ph="..." />
+            <marker date="1480225660000" expanded="true" signature="1226:1275" ph="/**...*/" />
+            <marker date="1480225660000" expanded="true" signature="1291:3957" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="1366:1521" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="1517:1521" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="1591:2769" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="1738:1827" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="1958:2209" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2251:2338" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2377:2611" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2421:2444" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2456:2605" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2708:2765" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="2810:3108" ph="(...)" />
+            <marker date="1480225660000" expanded="true" signature="3150:3954" ph="{...}" />
+            <marker date="1480225660000" expanded="true" signature="3403:3704" ph="(...)" />
+            <marker date="1480225660000" expanded="true" signature="3516:3696" ph="..." />
+            <marker date="1480225660000" expanded="true" signature="3713:3838" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ZKCheckpointtests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding>
+            <element signature="e#38#97#0" expanded="true" />
           </folding>
         </state>
       </provider>

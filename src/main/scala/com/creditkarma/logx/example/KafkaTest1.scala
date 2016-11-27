@@ -26,6 +26,10 @@ object KafkaTest1 {
 
   class IdentityTransformer[I <: BufferedData] extends Transformer[I, I]{
     override def transform(input: I): I = input
+
+    override def inRecords(input: I): Long = ???
+
+    override def outRecords(output: I): Long = ???
   }
 
 

@@ -4,42 +4,31 @@ import scala.util.{Failure, Success, Try}
 
 /**
   * Created by yongjia.wang on 11/16/16.
-  *
   */
-
-
-/**
-  * @tparam Meta meta data of the transformation, used to construct checkpoint delta and metrics
-  */
-trait Transformer[I <: BufferedData, O <: BufferedData, Meta] extends Module {
+trait Transformer[I <: BufferedData, O <: BufferedData] extends Module {
 
   // right now, transform seems only need to be measured by elapsed time, no other metrics in mind yet
-  def transform(input: I): (O,Meta)
+  def transform(input: I): O
 
+  def inRecords(input:I):Long
+  def outRecords(output:O):Long
 
-  def inBytes(meta: Meta): Long
-  def inRecords(meta: Meta): Long
-  def outBytes(meta: Meta): Long
-  def outRecords(meta: Meta): Long
-
-  final def execute(input: I): (O,Meta) = {
+  final def execute(input: I): O = {
     Try(transform(input))
     match {
-      case Success((out,meta)) => {
-
+      case Success(out) => {
 
         metricUpdate(
           Map(
-            MetricArgs.InRecords->inRecords(meta),
-            MetricArgs.InBytes->inBytes(meta),
-            MetricArgs.InRecords->outRecords(meta),
-            MetricArgs.InBytes->outBytes(meta)
+            MetricArgs.InRecords->inRecords(input),
+            MetricArgs.OutRecords->outRecords(out)
           )
         )
 
-        (out,meta)
-        // TODO instrumentation
 
+
+        out
+        // TODO instrumentation
       }
       case Failure(f) => throw f
     }
