@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3fefb42-5a3c-44c3-96ca-25d7dfadbf4c" name="Default" comment="" />
+    <ignored path="logx.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="logx" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="KafkaSparkStringRDDTimePartitionTransformer.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#47#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService/scala.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService/KafkaCheckpointService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService/ZookeeperCheckPointService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/Checkpointests.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/xyz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/x.java" />
+        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar!/sun/nio/ch/KQueueArrayWrapper.class" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/WriteUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKCreate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/a.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/Checkpointtests.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ProdIssue.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ByteUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/ZookeeperCheckPointService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ZKCheckpointtests.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaCheckpointtests.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZookeeperCpUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperUnit.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scratches" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrumentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="writer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="transformer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamreader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs" />
+      <recent name="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example" />
+      <recent name="$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ZKCheckpointtests">
+    <configuration default="false" name="ZKExists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.creditkarma.logx.utils.gcs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.creditkarma.logx.utils.gcs.ZKExists" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZKGetData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.creditkarma.logx.utils.gcs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.creditkarma.logx.utils.gcs.ZKGetData" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZookeeperCpUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.creditkarma.logx.utils.gcs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.creditkarma.logx.utils.gcs.ZookeeperCpUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZKCheckpointtests" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.creditkarma.logx.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.creditkarma.logx.example.ZKCheckpointtests" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="KafkaCheckpointtests" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.creditkarma.logx.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.creditkarma.logx.example.KafkaCheckpointtests" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="logx" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.ZKExists" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ZKGetData" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ZookeeperCpUtils" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ZKCheckpointtests" />
+      <item index="4" class="java.lang.String" itemvalue="Application.KafkaCheckpointtests" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.ZKCheckpointtests" />
+        <item index="1" class="java.lang.String" itemvalue="Application.KafkaCheckpointtests" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ZookeeperCpUtils" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ZKGetData" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ZKExists" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1479762163145" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="logx" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="logx" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="logx-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1479762114000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3fefb42-5a3c-44c3-96ca-25d7dfadbf4c" name="Default" comment="" />
+      <created>1479762129401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1479762129401</updated>
+      <workItem from="1479762136340" duration="13466000" />
+      <workItem from="1479782766740" duration="5529000" />
+      <workItem from="1479788671253" duration="647000" />
+      <workItem from="1479833110599" duration="37036000" />
+      <workItem from="1480044410488" duration="19875000" />
+      <workItem from="1480194910471" duration="8000" />
+    </task>
+    <task id="LOCAL-00001" summary="updated testing case">
+      <created>1479766211716</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1479766211716</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated testing case">
+      <created>1479766718392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1479766718392</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactoring zookeepercheckpointservice&#10;">
+      <created>1479769582388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1479769582388</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactoring zookeepercheckpointservice&#10;">
+      <created>1479860483020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479860483020</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adding prod issue sol'n&#10;">
+      <created>1479923957869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479923957869</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create a new unit test for zookeeper unit test service&#10;">
+      <created>1480049084746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1480049084747</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed the unit test for zookeeper check point service&#10;">
+      <created>1480049288598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1480049288598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add basic instrumentations to transformer (the trait) : # of input lines and # of output lines and bytes of input lines and bytes of output lines&#10;">
+      <created>1480132549777</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1480132549777</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed the time stamp parser (a transformer)">
+      <created>1480135150166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1480135150166</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76561000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5675341" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24236111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38795182" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26746988" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated testing case" />
+    <MESSAGE value="refactoring zookeepercheckpointservice&#10;" />
+    <MESSAGE value="adding prod issue sol'n&#10;" />
+    <MESSAGE value="create a new unit test for zookeeper unit test service&#10;" />
+    <MESSAGE value="changed the unit test for zookeeper check point service&#10;" />
+    <MESSAGE value="add basic instrumentations to transformer (the trait) : # of input lines and # of output lines and bytes of input lines and bytes of output lines&#10;" />
+    <MESSAGE value="changed the time stamp parser (a transformer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the time stamp parser (a transformer)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/ZookeeperCheckPointService.scala</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="36" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/MutableList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/common/TopicPartition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/clients/consumer/OffsetAndMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar!/sun/nio/ch/KQueueArrayWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKExists.java" />
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/WriteUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKExists.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKGetData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZKCreate.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/SparkKakfaGCS.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="45:729" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="732:781" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="803:6467" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="846:1254" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1303:5050" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1309:1418" ph="/.../" />
+            <marker date="1479762114000" expanded="true" signature="2376:2554" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2664:3965" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2815:3957" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="2913:3156" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3186:3712" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3395:3698" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3465:3682" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3494:3664" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4083:4226" ph="/.../" />
+            <marker date="1479762114000" expanded="true" signature="4516:4636" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4674:4819" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4904:5045" ph="/.../" />
+            <marker date="1479762114000" expanded="true" signature="5158:6158" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="5236:5302" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="5532:5573" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="5738:5822" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="5926:6038" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="6095:6154" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6190:6247" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6316:6465" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6345:6461" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="6346:6460" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6633:6833" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6682:6749" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6772:6804" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="6813:6829" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-logx">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-logx</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-logx</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="75.0" y="-26.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/OldTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-409">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="39" />
+          <folding>
+            <marker date="1480036507000" expanded="true" signature="38:88" ph="/**...*/" />
+            <marker date="1480036507000" expanded="true" signature="97:1224" ph="..." />
+            <marker date="1480036507000" expanded="true" signature="1226:1275" ph="/**...*/" />
+            <marker date="1480036507000" expanded="true" signature="1366:1419" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="1489:2667" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="1636:1725" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="1856:2107" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2149:2236" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2275:2509" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2319:2342" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2354:2503" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2606:2663" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="2708:3006" ph="(...)" />
+            <marker date="1480036507000" expanded="true" signature="3048:3852" ph="{...}" />
+            <marker date="1480036507000" expanded="true" signature="3301:3602" ph="(...)" />
+            <marker date="1480036507000" expanded="true" signature="3414:3594" ph="..." />
+            <marker date="1480036507000" expanded="true" signature="3611:3736" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ProdIssue.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1338">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1480039324000" expanded="true" signature="38:88" ph="/**...*/" />
+            <marker date="1480039324000" expanded="true" signature="96:1477" ph="..." />
+            <marker date="1480039324000" expanded="true" signature="1532:4728" ph="{...}" />
+            <marker date="1480039324000" expanded="true" signature="2230:2398" ph="..." />
+            <marker date="1480039324000" expanded="true" signature="2638:2909" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="2690:2906" ph="{...}" />
+            <marker date="1480039324000" expanded="true" signature="2788:2855" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="2937:3349" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="3088:3329" ph="{...}" />
+            <marker date="1480039324000" expanded="true" signature="3187:3266" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="3355:3479" ph="/.../" />
+            <marker date="1480039324000" expanded="true" signature="3498:3587" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="3588:3907" ph="/.../" />
+            <marker date="1480039324000" expanded="true" signature="3912:4162" ph="/.../" />
+            <marker date="1480039324000" expanded="true" signature="4330:4616" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="4490:4606" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="4797:4946" ph="{...}" />
+            <marker date="1480039324000" expanded="true" signature="4826:4942" ph="(...)" />
+            <marker date="1480039324000" expanded="true" signature="4827:4941" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.4.6-sources.jar!/org/apache/zookeeper/CreateMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.4.6-sources.jar!/org/apache/zookeeper/ZooKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="376" column="11" selection-start-line="376" selection-start-column="11" selection-end-line="376" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="380" column="0" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaTest1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="45:904" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="906:955" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="975:5775" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1050:1103" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1271:1754" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1361:1496" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1837:2086" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1966:1999" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2054:2082" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2155:3344" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2309:2398" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2529:2784" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2662:2720" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2733:2760" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2826:2913" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2952:3186" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2996:3019" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3031:3180" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3283:3340" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3385:3683" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3725:5352" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3966:4259" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4075:4253" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="4470:4736" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="5411:5773" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/info.batey.kafka/kafka-unit/srcs/kafka-unit-0.6-sources.jar!/info/batey/kafka/unit/KafkaUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="180" column="7" selection-start-line="180" selection-start-column="7" selection-end-line="180" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/info.batey.kafka/kafka-unit/srcs/kafka-unit-0.6-sources.jar!/info/batey/kafka/unit/Zookeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ByteUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <marker date="1480046952000" expanded="true" signature="70:118" ph="/**...*/" />
+            <marker date="1480046952000" expanded="true" signature="264:394" ph="{...}" />
+            <marker date="1480046952000" expanded="true" signature="445:624" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/GCSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <marker date="1479762114000" expanded="false" signature="48:656" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="658:698" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="906:1054" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1219:2464" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2695:3597" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2741:3590" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2844:3580" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2923:3069" ph="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <marker date="1480119282000" expanded="true" signature="99:337" ph="..." />
+            <marker date="1480119282000" expanded="true" signature="660:989" ph="{...}" />
+            <marker date="1480119282000" expanded="true" signature="716:927" ph="{...}" />
+            <marker date="1480119282000" expanded="true" signature="768:917" ph="{...}" />
+            <marker date="1480119282000" expanded="true" signature="1093:1121" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZookeeperCpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <marker date="1480119295000" expanded="true" signature="48:253" ph="..." />
+            <marker date="1480119295000" expanded="true" signature="255:408" ph="/**...*/" />
+            <marker date="1480119295000" expanded="true" signature="571:1273" ph="{...}" />
+            <marker date="1480119295000" expanded="true" signature="787:959" ph="//..." />
+            <marker date="1480119295000" expanded="true" signature="1379:1849" ph="{...}" />
+            <marker date="1480119295000" expanded="true" signature="1975:2362" ph="{...}" />
+            <marker date="1480119295000" expanded="true" signature="2492:2937" ph="{...}" />
+            <marker date="1480119295000" expanded="false" signature="2538:2546" ph="&lt;~&gt;" />
+            <marker date="1480119295000" expanded="true" signature="3017:3598" ph="{...}" />
+            <marker date="1480119295000" expanded="true" signature="3728:4124" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/creditkarma/logx/utils/gcs/ZooKeeperUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <marker date="1480119330000" expanded="true" signature="83:131" ph="/**...*/" />
+            <marker date="1480119330000" expanded="true" signature="239:313" ph="{...}" />
+            <marker date="1480119330000" expanded="true" signature="349:407" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/CheckpointService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:127" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="191:630" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="297:408" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="339:404" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="441:552" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="479:548" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Status.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="99:218" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="264:346" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="403:528" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="568:595" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/KafkaCheckpointtests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2214">
+          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding>
+            <marker date="1480051253000" expanded="true" signature="38:88" ph="/**...*/" />
+            <marker date="1480051253000" expanded="true" signature="98:1135" ph="..." />
+            <marker date="1480051253000" expanded="true" signature="1137:1187" ph="/**...*/" />
+            <marker date="1480051253000" expanded="true" signature="1216:8048" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1301:1550" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1430:1463" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1518:1546" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1645:2916" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="1799:1888" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2019:2356" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2398:2485" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2524:2758" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2568:2591" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2603:2752" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2855:2912" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="2957:3255" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="3297:8044" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="3542:3843" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="3655:3835" ph="..." />
+            <marker date="1480051253000" expanded="true" signature="3853:4260" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="4734:4992" ph="(...)" />
+            <marker date="1480051253000" expanded="true" signature="5316:5595" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="5604:5715" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="6258:6422" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="6693:6966" ph="{...}" />
+            <marker date="1480051253000" expanded="true" signature="6969:7502" ph="/.../" />
+            <marker date="1480051253000" expanded="true" signature="7503:7847" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/utils/LazyLog.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Checkpoint.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:120" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="164:337" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="168:305" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Instrumentable.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="106:1187" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="350:753" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="400:749" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="434:664" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="453:664" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="814:877" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="959:1023" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1054:1101" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1134:1185" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/LogXCore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:127" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="399:4158" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="536:786" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="892:3479" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="917:997" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1071:3454" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1156:3327" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1328:3327" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1451:3206" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1462:2981" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1670:2967" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1802:2811" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1837:2811" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1948:2649" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="2070:2259" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2127:2235" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2266:2649" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3030:3206" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3549:4040" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3586:4035" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3621:3944" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="3655:3944" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3699:3845" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="4065:4156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/MetricArgs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="122:200" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Instrumentor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:626" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="646:877" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/example/ZKCheckpointtests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <marker date="1480049215000" expanded="true" signature="45:361" ph="..." />
+            <marker date="1480049215000" expanded="true" signature="364:414" ph="/**...*/" />
+            <marker date="1480049215000" expanded="true" signature="443:1927" ph="{...}" />
+            <marker date="1480049215000" expanded="true" signature="485:1924" ph="{...}" />
+            <marker date="1480049215000" expanded="true" signature="1116:1272" ph="{...}" />
+            <marker date="1480049215000" expanded="true" signature="1615:1882" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpoint/KafkaCheckpoint.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/streambuffer/SparkDataset.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/streambuffer/SparkRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/writer/KafkaTimePartitionedMessageGCSWriter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="false" signature="49:324" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="326:375" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="511:1086" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="557:748" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/KafkaCheckpointService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/checkpointservice/ZookeeperCheckPointService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1480047553000" expanded="false" signature="60:476" ph="..." />
+            <marker date="1480047553000" expanded="true" signature="478:528" ph="/**...*/" />
+            <marker date="1480047553000" expanded="true" signature="676:2528" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="742:1751" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="1174:1353" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="1393:1741" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="1536:1633" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="1637:1734" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="1804:2525" ph="{...}" />
+            <marker date="1480047553000" expanded="true" signature="2137:2481" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/BufferedData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:555" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="575:579" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/instrumentation/LogInfoInstrumentor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="52:280" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="281:330" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="392:1567" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="429:789" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="558:785" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="827:868" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1031:1072" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1114:1174" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1244:1363" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1451:1565" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Module.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="35:84" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="121:393" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="202:263" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="329:391" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="434:504" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Writer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:349" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="410:1558" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="464:655" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="820:1008" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1105:1491" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1138:1487" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1176:1448" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1188:1425" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1203:1415" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Reader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <marker date="1479762114000" expanded="true" signature="78:183" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="263:1887" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="383:1046" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1113:1303" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="1532:1885" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1590:1881" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1636:1842" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1648:1783" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1663:1773" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/base/Transformer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <marker date="1480133478000" expanded="true" signature="78:131" ph="/**...*/" />
+            <marker date="1480133478000" expanded="true" signature="134:239" ph="/**...*/" />
+            <marker date="1480133478000" expanded="true" signature="317:1146" ph="{...}" />
+            <marker date="1480133478000" expanded="true" signature="638:1075" ph="{...}" />
+            <marker date="1480133478000" expanded="true" signature="676:1071" ph="{...}" />
+            <marker date="1480133478000" expanded="true" signature="712:1032" ph="..." />
+            <marker date="1480133478000" expanded="true" signature="736:971" ph="(...)" />
+            <marker date="1480133478000" expanded="true" signature="751:961" ph="(...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/streamreader/KafkaSparkRDDReader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="101" selection-end-column="35" />
+          <folding>
+            <marker date="1479762114000" expanded="false" signature="55:600" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="602:651" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="824:6057" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1243:1307" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1349:1376" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1421:1932" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1448:1928" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1503:1922" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1595:1660" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="1667:1922" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1711:1751" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1793:1912" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="1965:2134" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="1992:2130" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2265:4538" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="2357:2416" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2443:2509" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="2939:3604" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3057:3596" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3166:3499" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="3302:3461" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="3833:4098" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="3904:4090" ph="..." />
+            <marker date="1479762114000" expanded="true" signature="3970:4090" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4255:4499" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4291:4491" ph="(...)" />
+            <marker date="1479762114000" expanded="true" signature="4541:4589" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="4658:4945" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="4998:5049" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="5173:5381" ph="/**...*/" />
+            <marker date="1479762114000" expanded="true" signature="5459:5573" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="5632:5689" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="5746:5871" ph="{...}" />
+            <marker date="1479762114000" expanded="true" signature="5875:5982" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/creditkarma/logx/impl/transformer/KafkaSparkStringRDDTimePartitionTransformer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>logx</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>SBT: aopalliance:aopalliance:1.0:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3203125" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
